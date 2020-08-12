@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_weight="10"
+    android:background="@drawable/round_corner_updated"
+    android:elevation="20dp"
+    android:orientation="vertical"
+    android:padding="25sp">
+
+<LinearLayout
+    android:padding="10dp"
+
+    android:layout_width="match_parent"
+        android:layout_height="0sp"
+        android:layout_marginTop="30sp"
+        android:layout_weight="1">
+        <ImageView
+            android:id="@+id/iv_input_dialog"
+            android:layout_width="30sp"
+            android:layout_height="30sp"
+            android:layout_gravity="center"
+            android:src="@drawable/search_license_icon"/>
+        <EditText
+            android:id="@+id/et_verify_license"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="10sp"
+            android:backgroundTint="#fff"
+            android:hint="Enter CNIC without dashes(-)"
+            android:inputType="number"
+            android:maxLength="13"
+            android:textColor="#ffffff"
+            android:textColorHint="#ffffff"
+            android:textCursorDrawable="@null" />
+    </LinearLayout>
+
+        <Button
+            android:id="@+id/btn_search_license_record"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginBottom="10sp"
+            android:layout_marginTop="20sp"
+            android:background="@color/button_color"
+            android:gravity="center"
+            android:text="Search"
+            android:textColor="#ffffff"
+            android:textSize="25sp"/>
+        <Button
+            android:id="@+id/btn_search_license_record_qr"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginBottom="20sp"
+            android:background="@color/button_color"
+            android:gravity="center"
+            android:text="QR Scan"
+            android:textColor="#ffffff"
+            android:textSize="25sp"/>
+
+
+</LinearLayout>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/footer_home_icon"
+            android:title="Home" />
+
+        <item
+            android:id="@+id/nav_website"
+            android:icon="@drawable/footer_web_icon"
+            android:title="KP Traffic Police Website" />
+        <item
+            android:id="@+id/nav_license"
+            android:icon="@drawable/my_complaints_icon"
+            android:title="My License" />
+        <item
+            android:id="@+id/nav_mychalan"
+            android:icon="@drawable/my_complaints_icon"
+            android:title="My Chalan" />
+        <item
+            android:id="@+id/nav_logout"
+            android:icon="@drawable/logout_icon"
+            android:title="Log Out" />
+    </group>
+
+</menu>

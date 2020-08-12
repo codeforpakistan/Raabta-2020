@@ -1,0 +1,344 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_background"
+    tools:context=".fragments.DrivingSchoolLocations">
+    <ImageView
+        android:id="@+id/main_logo"
+        android:layout_marginBottom="20dp"
+        android:layout_centerHorizontal="true"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:layout_gravity="center_horizontal"
+        android:src="@drawable/main_layered_logo" />
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <ScrollView
+
+        android:fillViewport="true"
+        android:layout_below="@id/main_logo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+   <LinearLayout
+       android:id="@+id/main_layout"
+       android:layout_marginRight="10dp"
+       android:layout_marginLeft="10dp"
+       android:padding="10dp"
+       android:background="@drawable/white_boarder"
+       android:orientation="vertical"
+       android:layout_centerInParent="true"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content">
+       <TextView
+           android:gravity="center"
+           android:textSize="20dp"
+           android:layout_marginRight="20dp"
+           android:layout_marginLeft="20dp"
+           android:textStyle="bold"
+           android:textColor="#ffffff"
+           android:text="1) Driving Learning School West Cantt Police Station Saddar, Peshawar"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"></TextView>
+
+
+       <LinearLayout
+           android:background="@drawable/white_boarder"
+
+           android:layout_marginBottom="10dp"
+           android:layout_marginTop="30dp"
+
+           android:orientation="vertical"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content">
+           <TextView
+               android:layout_marginTop="20dp"
+               android:textSize="22dp"
+               android:textColor="#ffffff"
+               android:textStyle="bold"
+               android:gravity="center"
+               android:layout_gravity="center"
+               android:text="Requirements"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"></TextView>
+
+           <TextView
+               android:layout_marginTop="20dp"
+               android:layout_marginRight="15dp"
+               android:layout_marginLeft="15dp"
+               android:textStyle="bold"
+               android:textColor="#ffffff"
+               android:text="@string/licence_issuance_requirement_one"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"></TextView>
+           <TextView
+               android:layout_marginTop="20dp"
+               android:layout_marginRight="15dp"
+               android:layout_marginLeft="15dp"
+               android:textStyle="bold"
+               android:textColor="#ffffff"
+               android:text="@string/licence_issuance_requirement_two"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"></TextView>
+           <TextView
+               android:layout_marginTop="20dp"
+               android:layout_marginRight="15dp"
+               android:layout_marginLeft="15dp"
+               android:textStyle="bold"
+               android:textColor="#ffffff"
+               android:text="@string/licence_issuance_requirement_three"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"></TextView>
+           <TextView
+               android:layout_marginTop="20dp"
+               android:layout_marginRight="15dp"
+               android:layout_marginLeft="15dp"
+               android:textStyle="bold"
+               android:textColor="#ffffff"
+               android:text="@string/licence_issuance_requirement_four"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"></TextView>
+           <TextView
+               android:layout_marginTop="20dp"
+               android:layout_marginRight="15dp"
+               android:layout_marginLeft="15dp"
+               android:textStyle="bold"
+               android:textColor="#ffffff"
+               android:text="@string/licence_issuance_requirement_five"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"></TextView>
+           <TextView
+               android:layout_marginRight="10dp"
+               android:layout_marginLeft="10dp"
+               android:layout_marginTop="20dp"
+
+               android:textStyle="bold"
+               android:textColor="#ffffff"
+               android:text="@string/licence_issuance_requirement_eligible"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"></TextView>
+
+           <View
+               android:layout_marginBottom="20dp"
+               android:layout_marginTop="20dp"
+               android:layout_width="match_parent"
+               android:layout_height="1dp"
+               android:background="@android:color/white" />
+
+
+
+
+           <TextView
+               android:textSize="22dp"
+               android:textColor="#ffffff"
+               android:textStyle="bold"
+               android:gravity="center"
+               android:layout_gravity="center"
+               android:text="Procedure"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"></TextView>
+
+           <TextView
+               android:layout_marginTop="20dp"
+               android:layout_marginRight="15dp"
+               android:layout_marginLeft="15dp"
+               android:textStyle="bold"
+               android:textColor="#ffffff"
+               android:text="@string/issuance_step_one"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"></TextView>
+           <TextView
+               android:layout_marginTop="20dp"
+               android:layout_marginRight="15dp"
+               android:layout_marginLeft="15dp"
+               android:textStyle="bold"
+               android:textColor="#ffffff"
+               android:text="@string/issuance_step_two"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"></TextView>
+           <TextView
+               android:layout_marginBottom="60dp"
+               android:layout_marginTop="20dp"
+               android:layout_marginRight="15dp"
+               android:layout_marginLeft="15dp"
+               android:textStyle="bold"
+               android:textColor="#ffffff"
+               android:text="@string/issuance_step_three"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"></TextView>
+       </LinearLayout>
+
+
+       <Button
+           android:id="@+id/firstDirection"
+           android:textColor="#ffffff"
+           android:textStyle="bold"
+           android:text="View Directions"
+           android:background="@color/button_color"
+           android:layout_marginTop="20dp"
+           android:layout_gravity="center"
+           android:gravity="center"
+           android:layout_width="250dp"
+           android:layout_height="wrap_content"></Button>
+       <View
+           android:layout_marginTop="20dp"
+           android:layout_width="match_parent"
+           android:layout_height="1dp"
+           android:background="@android:color/white" />
+
+       <TextView
+           android:layout_marginTop="20dp"
+           android:gravity="center"
+           android:textSize="20dp"
+           android:layout_marginRight="20dp"
+           android:layout_marginLeft="20dp"
+           android:textStyle="bold"
+           android:textColor="#ffffff"
+           android:text="2) Driving Learning School Hayatabad, Peshawar"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"></TextView>
+
+       <LinearLayout
+           android:background="@drawable/white_boarder"
+
+           android:layout_marginBottom="10dp"
+           android:layout_marginTop="30dp"
+
+           android:orientation="vertical"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content">
+           <TextView
+               android:layout_marginTop="20dp"
+               android:textSize="22dp"
+               android:textColor="#ffffff"
+               android:textStyle="bold"
+               android:gravity="center"
+               android:layout_gravity="center"
+               android:text="Requirements"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"></TextView>
+
+           <TextView
+               android:layout_marginTop="20dp"
+               android:layout_marginRight="15dp"
+               android:layout_marginLeft="15dp"
+               android:textStyle="bold"
+               android:textColor="#ffffff"
+               android:text="@string/licence_issuance_requirement_one"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"></TextView>
+           <TextView
+               android:layout_marginTop="20dp"
+               android:layout_marginRight="15dp"
+               android:layout_marginLeft="15dp"
+               android:textStyle="bold"
+               android:textColor="#ffffff"
+               android:text="@string/licence_issuance_requirement_two"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"></TextView>
+           <TextView
+               android:layout_marginTop="20dp"
+               android:layout_marginRight="15dp"
+               android:layout_marginLeft="15dp"
+               android:textStyle="bold"
+               android:textColor="#ffffff"
+               android:text="@string/licence_issuance_requirement_three"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"></TextView>
+           <TextView
+               android:layout_marginTop="20dp"
+               android:layout_marginRight="15dp"
+               android:layout_marginLeft="15dp"
+               android:textStyle="bold"
+               android:textColor="#ffffff"
+               android:text="@string/licence_issuance_requirement_four"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"></TextView>
+           <TextView
+               android:layout_marginTop="20dp"
+               android:layout_marginRight="15dp"
+               android:layout_marginLeft="15dp"
+               android:textStyle="bold"
+               android:textColor="#ffffff"
+               android:text="@string/licence_issuance_requirement_five"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"></TextView>
+           <TextView
+               android:layout_marginRight="10dp"
+               android:layout_marginLeft="10dp"
+               android:layout_marginTop="20dp"
+
+               android:textStyle="bold"
+               android:textColor="#ffffff"
+               android:text="@string/licence_issuance_requirement_eligible"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"></TextView>
+
+           <View
+               android:layout_marginBottom="20dp"
+               android:layout_marginTop="20dp"
+               android:layout_width="match_parent"
+               android:layout_height="1dp"
+               android:background="@android:color/white" />
+
+
+
+
+           <TextView
+               android:textSize="22dp"
+               android:textColor="#ffffff"
+               android:textStyle="bold"
+               android:gravity="center"
+               android:layout_gravity="center"
+               android:text="Procedure"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"></TextView>
+
+           <TextView
+               android:layout_marginTop="20dp"
+               android:layout_marginRight="15dp"
+               android:layout_marginLeft="15dp"
+               android:textStyle="bold"
+               android:textColor="#ffffff"
+               android:text="@string/issuance_step_one"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"></TextView>
+           <TextView
+               android:layout_marginTop="20dp"
+               android:layout_marginRight="15dp"
+               android:layout_marginLeft="15dp"
+               android:textStyle="bold"
+               android:textColor="#ffffff"
+               android:text="@string/issuance_step_two"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"></TextView>
+           <TextView
+               android:layout_marginBottom="60dp"
+               android:layout_marginTop="20dp"
+               android:layout_marginRight="15dp"
+               android:layout_marginLeft="15dp"
+               android:textStyle="bold"
+               android:textColor="#ffffff"
+               android:text="@string/issuance_step_three"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"></TextView>
+       </LinearLayout>
+
+
+       <Button
+           android:id="@+id/secondDirection"
+           android:textColor="#ffffff"
+           android:textStyle="bold"
+           android:text="View Directions"
+           android:background="@color/button_color"
+           android:layout_marginTop="20dp"
+           android:layout_gravity="center"
+           android:gravity="center"
+           android:layout_width="250dp"
+           android:layout_height="wrap_content"></Button>
+   </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

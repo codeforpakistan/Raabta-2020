@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="50dp"
+    android:background="@drawable/border"
+    android:orientation="vertical"
+    android:padding="5dp">
+
+    <ImageView
+        android:id="@+id/traffic_education_image"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_gravity="center_horizontal"
+        android:scaleType="centerCrop"
+        />
+
+
+    <TextView
+        android:id="@+id/tv_image_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/traffic_education_image"
+        android:gravity="center_horizontal"
+        android:maxLength="20"
+        android:text="Image Title"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="#126266"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        />
+
+    <TextView
+        android:id="@+id/description_english"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_image_title"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+
+        android:gravity="center_horizontal"
+        android:text="English Description English Description here here"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="#ababaa"
+        android:textSize="18sp"
+        android:visibility="gone" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/description_english"
+        android:layout_marginRight="10dp"
+        android:gravity="right"
+        android:text="Urdu Description Urdu Description Urdu Description Urdu Description"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="#ababaa"
+        android:textSize="18sp"
+        android:visibility="gone" />
+</LinearLayout>

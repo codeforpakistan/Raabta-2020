@@ -1,0 +1,145 @@
+buildscript {
+    repositories {
+        maven { url 'https://maven.fabric.io/public' }
+    }
+
+    dependencies {
+        classpath 'io.fabric.tools:gradle:1.28.0'
+    }
+}
+apply plugin: 'com.android.application'
+apply plugin: 'io.fabric'
+
+repositories {
+    maven { url 'https://maven.fabric.io/public' }
+}
+
+
+allprojects {
+    // ...
+    repositories {
+        // ...
+        maven {
+            url 'https://maven.google.com/'
+        }
+    }
+}
+
+
+android {
+    signingConfigs {
+        config {
+            keyAlias 'abc123'
+            keyPassword 'abc123'
+            storePassword 'abc123'
+            //   storeFile file('D:/CFP Stuff/trafficApp.jks')
+        }
+    }
+    compileSdkVersion 29
+    defaultConfig {
+        applicationId "com.kptrafficpolice.trafficapp"
+        minSdkVersion 16
+        targetSdkVersion 29
+        versionCode 36
+        versionName "license verification api updated"
+        multiDexEnabled true
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            lintOptions {
+                disable 'MissingTranslation'
+            }
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.config
+        }
+        debug {
+        }
+    }
+    packagingOptions {
+        exclude 'META-INF/DEPENDENCIES.txt'
+        exclude 'META-INF/LICENSE.txt'
+        exclude 'META-INF/NOTICE.txt'
+        exclude 'META-INF/NOTICE'
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/DEPENDENCIES'
+        exclude 'META-INF/notice.txt'
+        exclude 'META-INF/license.txt'
+        exclude 'META-INF/dependencies.txt'
+        exclude 'META-INF/LGPL2.1'
+    }
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+    implementation 'androidx.appcompat:appcompat:1.1.0'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    androidTestImplementation('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    implementation files('libs/httpclient-4.3.6.jar')
+    implementation files('libs/httpcore-4.3.3.jar')
+    implementation files('libs/httpmime-4.3.6.jar')
+
+
+    implementation 'com.tt:whorlviewlibrary:1.0.3'
+    implementation 'com.crashlytics.sdk.android:crashlytics:2.10.1'
+    implementation 'com.github.MdFarhanRaja:SearchableSpinner:1.7'
+    implementation 'com.iceteck.silicompressorr:silicompressor:2.0'
+    implementation 'com.android.support:appcompat-v7:25.3.1'
+    implementation 'com.android.support:support-v4:25.3.1'
+    implementation 'io.nlopez.smartlocation:library:3.3.3'
+
+    implementation 'com.wrapp.floatlabelededittext:library:0.0.6'
+    implementation 'com.android.support:design:25.3.1'
+    implementation 'com.mcxiaoke.volley:library:1.0.19'
+    implementation 'com.jaredrummler:material-spinner:1.1.0'
+    implementation 'com.github.f0ris.sweetalert:library:1.5.1'
+
+    implementation 'com.orhanobut:dialogplus:1.11@aar'
+    implementation 'com.github.javiersantos:MaterialStyledDialogs:2.1'
+    implementation 'com.android.support:recyclerview-v7:26.1.0'
+    implementation 'com.android.support:cardview-v7:26.1.0'
+    implementation 'com.afollestad.material-dialogs:core:0.9.4.4'
+    implementation 'com.google.android.gms:play-services-maps:17.0.0'
+    implementation 'com.github.imangazalievm:circlemenu:1.0.3'
+    implementation 'com.android.support:multidex:1.0.3'
+    implementation 'com.squareup.picasso:picasso:2.71828'
+    implementation 'com.github.bumptech.glide:glide:4.11.0'
+    implementation 'com.thefinestartist:finestwebview:1.2.7'
+    implementation 'com.github.mancj:MaterialSearchBar:0.7.1'
+    implementation 'com.github.apl-devs:appintro:v4.2.2'
+    implementation 'com.commit451:PhotoView:1.2.4'
+    implementation 'com.google.firebase:firebase-core:17.4.3'
+    implementation 'com.google.firebase:firebase-auth:19.3.1'
+
+    implementation 'com.android.support.constraint:constraint-layout:1.1.3'
+    implementation 'com.google.android.gms:play-services-analytics:17.0.0'
+
+    implementation 'com.google.android.gms:play-services-location:17.0.0'
+    implementation 'com.nineoldandroids:library:2.4.0'
+    testImplementation 'junit:junit:4.12'
+    implementation 'com.jaredrummler:material-spinner:1.1.0'
+    implementation 'com.karumi:dexter:4.2.0'
+    implementation 'net.sourceforge.jexcelapi:jxl:2.6.12' //for excel sheets
+    implementation 'com.github.hassanusman:CircularDialogs:1.2'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.9.0'
+    implementation('com.crashlytics.sdk.android:crashlytics-ndk:2.1.1@aar') {
+        transitive = true;
+    }
+    implementation "androidx.recyclerview:recyclerview:1.1.0"
+    implementation 'com.github.nisrulz:qreader:2.1.2'
+    implementation 'com.google.firebase:firebase-ml-vision:21.0.0'
+
+
+}
+apply plugin: 'com.google.gms.google-services'
+
+
+crashlytics {
+    enableNdk true
+    androidNdkOut 'src/main/obj'
+    androidNdkLibsOut 'src/main/libs'
+}

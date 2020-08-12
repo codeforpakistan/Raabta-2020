@@ -1,0 +1,242 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    android:orientation="vertical"
+    tools:context="com.kptrafficpolice.trafficapp.fragments.ComplaintRegistrationFragment">
+
+    <ScrollView
+        android:id="@+id/sv_complaint"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+        <!-- TODO: Update blank fragment layout -->
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="130dp"
+                        android:layout_weight="0.5"
+                        android:background="@color/colorPrimary"></LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:layout_weight="0.2"
+                        android:background="#fff"></LinearLayout>
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="96dp"
+                    android:layout_height="96dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="35dp"
+                    app:srcCompat="@drawable/main_screen_logo" />
+            </FrameLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="-25dp"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <com.jaredrummler.materialspinner.MaterialSpinner
+                        android:id="@+id/spinner"
+                        android:hint="select me"
+                        android:textColor="#a4a4a4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="start" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1.7dp"
+                        android:background="#EEEEEE" />
+
+                    <!--<com.jaredrummler.materialspinner.MaterialSpinner-->
+                        <!--android:id="@+id/spinner2"-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--/>-->
+
+                    <!--<View-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="1.7dp"-->
+                        <!--android:background="#EEEEEE" />-->
+
+
+                    <LinearLayout
+                        android:layout_marginTop="8dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical">
+
+
+                        <TextView
+                            android:id="@+id/spinner2"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:drawableRight="@drawable/ic_drop"
+                            android:editable="false"
+                            android:gravity="start"
+                            android:hint="Select District"
+                            android:paddingLeft="22dp"
+                            android:paddingRight="7dp"
+                            android:paddingTop="10dp"
+                            android:textColor="#a4a4a4"
+                            android:textColorHint="#a4a4a4"
+                            android:textSize="13dp" />
+
+
+
+                    </LinearLayout>
+
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1.7dp"
+                        android:background="#EEEEEE" />
+
+
+
+                    <EditText
+                        android:id="@+id/et_description"
+                        android:layout_width="match_parent"
+                        android:layout_height="100dp"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="20dp"
+                        android:background="@drawable/edit_text_bg_green"
+                        android:gravity="top"
+                        android:hint="Write Complaint Detail"
+                        android:paddingLeft="15dp"
+                        android:textColor="#000"
+                        android:textCursorDrawable="@drawable/color_cursor"
+                        android:textSize="15sp" />
+
+
+                </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/llayout_camera"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <FrameLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center">
+
+                                <ImageView
+                                    android:id="@+id/iv_take_picture"
+                                    android:layout_width="60dp"
+                                    android:layout_height="60dp"
+                                    android:layout_gravity="center_horizontal"
+                                    android:layout_weight="1"
+                                    android:src="@drawable/complaint_camera_picture" />
+
+                                <ImageView
+                                    android:id="@+id/iv_cross_image"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="20dp"
+                                    android:layout_gravity="top|right"
+                                    android:layout_marginLeft="60dp"
+                                    android:background="#fff"
+                                    android:src="@drawable/cross_image" />
+                            </FrameLayout>
+
+                            <TextView
+                                android:id="@+id/tv_take_pic"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_marginTop="10dp"
+                                android:text="Take Picture" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <FrameLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center">
+
+                                <ImageView
+                                    android:id="@+id/iv_cross_video"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="20dp"
+                                    android:layout_gravity="top|right"
+                                    android:layout_marginLeft="60dp"
+
+                                    android:background="#fff"
+                                    android:src="@drawable/cross_image" />
+
+                                <ImageView
+                                    android:id="@+id/iv_record_video"
+                                    android:layout_width="60dp"
+                                    android:layout_height="60dp"
+                                    android:layout_gravity="center_horizontal"
+                                    android:layout_weight="1"
+                                    android:src="@drawable/complaint_camera_video" />
+                            </FrameLayout>
+
+                            <TextView
+                                android:id="@+id/tv_record_video"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_marginTop="10dp"
+                                android:text="Record Video" />
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+
+
+                <Button
+                    android:id="@+id/btn_send_complaint"
+                    android:layout_width="250dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="30dp"
+                    android:background="@color/button_color"
+                    android:text="Send"
+                    android:textColor="#fff"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+
+        </TableLayout>
+    </ScrollView>
+</LinearLayout>

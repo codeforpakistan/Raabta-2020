@@ -1,0 +1,34 @@
+<resources>
+    <string name="app_name">KP Traffic App</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+
+    <!-- Strings related to login -->
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="child_text">offence Child List</string>
+    <string name="parent_text">Offence Parent List</string>
+    <string name="licence_issuance_requirement_one">• Pass Test page duly signed by the MLA (In case of failing the test the applicant must repeat the phase 2 i.e. again printing the test page by depositing again the said amount in the bank).</string>
+    <string name="licence_issuance_requirement_two">• CNIC of the Concerned District (In case of the out district, permission may be granted from the concerned MLA/DPO in advance).</string>
+    <string name="licence_issuance_requirement_three">• Medical Form duly signed from the Medical Officer.</string>
+    <string name="licence_issuance_requirement_four">• Fee Slip deposit in the designated Bank i.e. Rs 125 or 250.</string>
+    <string name="licence_issuance_requirement_eligible">After fulfilling the above requirements the applicant is eligible for getting the Computerized Driving License.</string>
+    <string name="licence_issuance_requirement_five">• Fee Slip Deposited in the Bank for license Issuance i.e. Rs.600 or Rs.1200.</string>
+
+    <string name="issuance_step_one">
+Step 1 :
+Token issuance:- For getting a computerized Driving License Token will be issued to the applicant in which the applicant CNIC No, Name, Type of License, Deposited amount, date of fee deposited and bank name are stored in the Database.</string>
+    <string name="issuance_step_two">
+    Step 2:
+        Thumb and Signature Storing: – Applicant thumb and Signature are stored in the Database.</string>
+    <string name="issuance_step_three">
+    Step 3:
+        Issuance of Fresh driving License: -After completing all the above steps the system will give a Computerized Driving License number to the applicant and a receipt is handed over to the applicant by telling him the receiving date of CDL and the history sheet is kept in record</string>
+    <string name="intro_text">Point the camera view to a QR Code to read the information</string>
+    <string name="restart_activity">Restart Activity</string>
+    <string name="stop_start_qreader">Stop QREader</string>
+</resources>
