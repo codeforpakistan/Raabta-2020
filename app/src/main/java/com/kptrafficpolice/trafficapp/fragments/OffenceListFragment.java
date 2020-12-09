@@ -6,11 +6,10 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ExpandableListView;
-import android.widget.Toast;
 
 import androidx.fragment.app.Fragment;
 
-import com.kptrafficpolice.trafficapp.Adapters.ExpandableListAdapter;
+import com.kptrafficpolice.trafficapp.Adapters.ExpandableListAdapter2;
 import com.kptrafficpolice.trafficapp.R;
 
 import java.util.ArrayList;
@@ -33,7 +32,7 @@ public class OffenceListFragment extends Fragment {
     private List<String> parent_title;
     private HashMap<String, List<String>> child_title;
     private ExpandableListView expandableListView;
-    private ExpandableListAdapter expandableListAdapter;
+    private ExpandableListAdapter2 expandableListAdapter2;
 
     private static String PARENT_TITLE_ONE="Parent One";
     private static String PARENT_TITLE_TWO="Parent Two";

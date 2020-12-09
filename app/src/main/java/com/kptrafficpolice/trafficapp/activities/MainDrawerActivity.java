@@ -1,7 +1,9 @@
 package com.kptrafficpolice.trafficapp.activities;
 
+import android.app.Dialog;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.net.Uri;
 import android.os.Bundle;
 
 import android.view.Gravity;
@@ -9,7 +11,10 @@ import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.Window;
+import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.ActionBarDrawerToggle;
@@ -23,6 +28,7 @@ import androidx.fragment.app.FragmentTransaction;
 import com.crashlytics.android.Crashlytics;
 import com.google.android.material.navigation.NavigationView;
 import com.kptrafficpolice.trafficapp.R;
+import com.kptrafficpolice.trafficapp.fragments.ChangePassword;
 import com.kptrafficpolice.trafficapp.fragments.MainFragment;
 import com.kptrafficpolice.trafficapp.fragments.MyComplaintsFragment;
 import com.kptrafficpolice.trafficapp.fragments.MyLicenseFragment;
@@ -38,6 +44,7 @@ public class MainDrawerActivity extends AppCompatActivity
     SharedPreferences.Editor editor;
     String prefCNIC;
     DrawerLayout drawer;
+    private Dialog dialog;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -57,7 +64,7 @@ public class MainDrawerActivity extends AppCompatActivity
 // Replace whatever is in the fragment_container view with this fragment,
 // and add the transaction to the back stack if needed
         transaction.replace(R.id.fragment_container, fragment);
-        transaction.addToBackStack(null);
+//        transaction.addToBackStack(null);
 
 // Commit the transaction
         transaction.commit();
@@ -123,12 +130,17 @@ public class MainDrawerActivity extends AppCompatActivity
                     .titleFont("Roboto-Medium.ttf")
                     .disableIconForward(true)
                     .disableIconBack(true)
-                    .show("http://www.ptpkp.gov.pk/");
+                    .show("http://kppolice.gov.pk/");
         } else if (id == R.id.nav_logout) {
             editor.clear().commit();
             startActivity(new Intent(MainDrawerActivity.this, MainActivity.class));
             finish();
-        } else if (id == R.id.nav_home) {
+        }
+
+        else if (id == R.id.nav_contact) {
+            contactDialog();
+        }
+        else if (id == R.id.nav_home) {
 
             fragment = new MainFragment();
             Bundle bundle = new Bundle();
@@ -145,7 +157,26 @@ public class MainDrawerActivity extends AppCompatActivity
             transaction.commit();
 
         }
-        else if (id==R.id.nav_license){
+
+
+        else if (id == R.id.nav_change_password) {
+
+            fragment = new ChangePassword();
+            Bundle bundle = new Bundle();
+            bundle.putBoolean("key",false);
+            FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+
+            fragment.setArguments(bundle);
+// Replace whatever is in the fragment_container view with this fragment,
+// and add the transaction to the back stack if needed
+            transaction.replace(R.id.fragment_container, fragment);
+            transaction.addToBackStack(null);
+
+// Commit the transaction
+            transaction.commit();
+
+        }
+        /*else if (id==R.id.nav_license){
 
             Bundle bundle = new Bundle();
             bundle.putBoolean("key",true);
@@ -163,7 +194,7 @@ public class MainDrawerActivity extends AppCompatActivity
             transaction.commit();
 
 
-        }
+        }*/
 
 
 
@@ -171,6 +202,50 @@ public class MainDrawerActivity extends AppCompatActivity
         drawer.closeDrawer(GravityCompat.START);
         return true;
     }
+
+    public void contactDialog() {
+        dialog = new Dialog(MainDrawerActivity.this);
+        dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
+        dialog.setContentView(R.layout.contact_us_dialog);
+        dialog.setCancelable(true);
+        Button call1=dialog.findViewById(R.id.caller_no1);
+        Button call2=dialog.findViewById(R.id.caller_no2);
+        Button call3=dialog.findViewById(R.id.caller_no3);
+        call1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+
+                dialog.dismiss();
+                Intent intent = new Intent(Intent.ACTION_DIAL);
+                intent.setData(Uri.parse("tel:0919225361"));
+                startActivity(intent);
+            }
+        });
+        call2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                dialog.dismiss();
+                Intent intent = new Intent(Intent.ACTION_DIAL);
+                intent.setData(Uri.parse("tel:0919225355"));
+                startActivity(intent);
+            }
+        });
+        call3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                dialog.dismiss();
+                Intent intent = new Intent(Intent.ACTION_DIAL);
+                intent.setData(Uri.parse("tel:0919211475"));
+                startActivity(intent);
+
+            }
+        });
+        dialog.show();
+        dialog.getWindow().getDecorView().setBackgroundResource(android.R.color.transparent);
+
+    }
+
 
     public void customActionBar() {
         ActionBar mActionBar = MainDrawerActivity.this.getSupportActionBar();

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_weight="10"
+    android:layout_gravity="center_horizontal"
+    android:background="@drawable/round_corner_updated"
+    android:elevation="20dp"
+    android:orientation="vertical"
+    android:padding="25sp">
+
+    <LinearLayout
+        android:padding="10dp"
+
+        android:layout_width="match_parent"
+        android:layout_height="0sp"
+        android:layout_marginTop="30sp"
+        android:layout_weight="1">
+
+        <TextView
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:id="@+id/contact_us_title"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center"
+            android:layout_marginLeft="10sp"
+            android:text="CAll Us 24/7"
+            android:textColor="#ffffff"
+            android:textCursorDrawable="@null" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/caller_no1"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginBottom="10sp"
+        android:layout_marginTop="20sp"
+        android:background="@color/button_color"
+        android:gravity="center"
+        android:text="SSP TRAFFIC"
+        android:textColor="#ffffff"
+        android:textSize="25sp"/>
+    <Button
+        android:id="@+id/caller_no2"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginBottom="10sp"
+        android:background="@color/button_color"
+        android:gravity="center"
+        android:text="SP CITY"
+        android:textColor="#ffffff"
+        android:textSize="25sp"/>
+    <Button
+        android:id="@+id/caller_no3"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginBottom="20sp"
+        android:background="@color/button_color"
+        android:gravity="center"
+        android:text="CONTROL ROOM"
+        android:textColor="#ffffff"
+        android:textSize="25sp"/>
+
+
+</LinearLayout>

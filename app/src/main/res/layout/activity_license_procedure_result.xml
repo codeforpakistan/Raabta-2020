@@ -1,0 +1,707 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.LicenseProcedureResult">
+
+
+
+    <ScrollView
+        android:visibility="invisible"
+        android:id="@+id/main1"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="20dp"
+        android:fillViewport="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_marginBottom="20dp"
+            android:layout_margin="30dp"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+
+                android:id="@+id/learner_license_permit"
+                android:background="@color/colorPrimary"
+
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+
+                    android:textColor="#ffffff"
+                    android:textStyle="bold"
+                    android:padding="20dp"
+                    android:text="⦁	 City Traffic Police Office is situated in Gulbahar, Peshawar."
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"></TextView>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_marginTop="10dp"
+                android:background="@color/colorPrimary"
+                android:id="@+id/permanent_driving_license"
+                android:weightSum="1"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+
+                    android:textColor="#ffffff"
+                    android:textStyle="bold"
+                    android:padding="20dp"
+                    android:text="⦁	The candidate needs to come to City Traffic Police Office, in person."
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"></TextView>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_marginTop="10dp"
+                android:background="@color/colorPrimary"
+                android:id="@+id/light_transport_license"
+                android:weightSum="1"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+
+                    android:textColor="#ffffff"
+                    android:textStyle="bold"
+                    android:padding="20dp"
+                    android:text="⦁	Show your Original CNIC in reception and get your Visitor Card for the required process."
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"></TextView>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_marginTop="10dp"
+                android:background="@color/colorPrimary"
+                android:id="@+id/diplomat_non_deplomat_license"
+                android:weightSum="1"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+
+                    android:textColor="#ffffff"
+                    android:textStyle="bold"
+                    android:padding="20dp"
+                    android:text="⦁	After getting visitor card go to the hall"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"></TextView>
+
+            </LinearLayout>
+
+
+
+
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <ScrollView
+        android:visibility="invisible"
+        android:id="@+id/main2"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="20dp"
+        android:fillViewport="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_marginBottom="20dp"
+            android:layout_margin="30dp"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+
+                android:background="@color/colorPrimary"
+
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+
+                    android:textColor="#ffffff"
+                    android:textStyle="bold"
+                    android:padding="20dp"
+                    android:text="⦁	Every candidate in supposed to take road sign test and driving test."
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"></TextView>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_marginTop="10dp"
+                android:background="@color/colorPrimary"
+                android:weightSum="1"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+
+                    android:textColor="#ffffff"
+                    android:textStyle="bold"
+                    android:padding="20dp"
+                    android:text="⦁	For LTV driving license the candidate must be 21 year of age at the time of learner permit."
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"></TextView>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_marginTop="10dp"
+                android:background="@color/colorPrimary"
+                android:weightSum="1"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+
+                    android:textColor="#ffffff"
+                    android:textStyle="bold"
+                    android:padding="20dp"
+                    android:text="⦁	After completion of 06 months, take along learner permit, original CNIC, fee slip."
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"></TextView>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_marginTop="10dp"
+                android:background="@color/colorPrimary"
+                android:weightSum="1"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+
+                    android:textColor="#ffffff"
+                    android:textStyle="bold"
+                    android:padding="20dp"
+                    android:text="⦁	On turn your fingerprint and snap will be recorded and saved in the computer."
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"></TextView>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_marginTop="10dp"
+                android:background="@color/colorPrimary"
+                android:weightSum="1"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+
+                    android:textColor="#ffffff"
+                    android:textStyle="bold"
+                    android:padding="20dp"
+                    android:text="⦁	Obtained test slip and attached copies of CNIC, learner slip, driving license fee slip"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"></TextView>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_marginTop="10dp"
+                android:background="@color/colorPrimary"
+                android:weightSum="1"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+
+                    android:textColor="#ffffff"
+                    android:textStyle="bold"
+                    android:padding="20dp"
+                    android:text="⦁ Go to theory test through touch screen in theory test area."
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"></TextView>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_marginTop="10dp"
+                android:background="@color/colorPrimary"
+                android:weightSum="1"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+
+                    android:textColor="#ffffff"
+                    android:textStyle="bold"
+                    android:padding="20dp"
+                    android:text="⦁	After successfully going through the theory test, candidate should appear in practical driving test in the driving test area."
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"></TextView>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_marginTop="10dp"
+                android:background="@color/colorPrimary"
+                android:weightSum="1"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+
+                    android:textColor="#ffffff"
+                    android:textStyle="bold"
+                    android:padding="20dp"
+                    android:text="⦁	After passing both the tests, form should be signed by Motor License Authority (MLA)."
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"></TextView>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_marginTop="10dp"
+                android:background="@color/colorPrimary"
+                android:weightSum="1"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+
+                    android:textColor="#ffffff"
+                    android:textStyle="bold"
+                    android:padding="20dp"
+                    android:text="⦁	A driving license slip will be handed over to the candidate depicting license number and date of collection."
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"></TextView>
+
+            </LinearLayout>
+
+
+
+
+
+
+
+        </LinearLayout>
+
+    </ScrollView>
+    <ScrollView
+        android:visibility="invisible"
+        android:id="@+id/main3"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="20dp"
+        android:fillViewport="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_marginBottom="20dp"
+            android:layout_margin="30dp"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+
+                android:background="@color/colorPrimary"
+
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+
+                    android:textColor="#ffffff"
+                    android:textStyle="bold"
+                    android:padding="20dp"
+                    android:text="⦁	Every candidate in supposed to take road sign test and driving test."
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"></TextView>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_marginTop="10dp"
+                android:background="@color/colorPrimary"
+                android:weightSum="1"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+
+                    android:textColor="#ffffff"
+                    android:textStyle="bold"
+                    android:padding="20dp"
+                    android:text="⦁	For LTV driving license the candidate must be 21 year of age at the time of learner permit."
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"></TextView>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_marginTop="10dp"
+                android:background="@color/colorPrimary"
+                android:weightSum="1"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+
+                    android:textColor="#ffffff"
+                    android:textStyle="bold"
+                    android:padding="20dp"
+                    android:text="⦁	After completion of 06 months, take along learner permit, original CNIC, fee slip."
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"></TextView>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_marginTop="10dp"
+                android:background="@color/colorPrimary"
+                android:weightSum="1"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+
+                    android:textColor="#ffffff"
+                    android:textStyle="bold"
+                    android:padding="20dp"
+                    android:text="⦁	On turn your fingerprint and snap will be recorded and saved in the computer."
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"></TextView>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_marginTop="10dp"
+                android:background="@color/colorPrimary"
+                android:weightSum="1"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+
+                    android:textColor="#ffffff"
+                    android:textStyle="bold"
+                    android:padding="20dp"
+                    android:text="⦁	LTV driving test is held every Thursday in the Traffic Headquarter Peshawar."
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"></TextView>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_marginTop="10dp"
+                android:background="@color/colorPrimary"
+                android:weightSum="1"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+
+                    android:textColor="#ffffff"
+                    android:textStyle="bold"
+                    android:padding="20dp"
+                    android:text="⦁	There road sign tests held first then after successfully going through the theory i.e. signal test, the candidate has to undergo for practical test."
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"></TextView>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_marginTop="10dp"
+                android:background="@color/colorPrimary"
+                android:weightSum="1"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+
+                    android:textColor="#ffffff"
+                    android:textStyle="bold"
+                    android:padding="20dp"
+                    android:text="⦁	 Candidate who have passed driving test come to traffic office Peshawar on given date. Get your form and submit to MLA licensing. A driving license slip will be handed over to the candidate depicting license number and date of collection."
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"></TextView>
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </ScrollView>
+    <ScrollView
+        android:visibility="invisible"
+        android:id="@+id/main4"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="20dp"
+        android:fillViewport="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_marginBottom="20dp"
+            android:layout_margin="30dp"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+
+                android:background="@color/colorPrimary"
+
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+
+                    android:textColor="#ffffff"
+                    android:textStyle="bold"
+                    android:padding="20dp"
+                    android:text="⦁	Letter from Ministry of Foreign (Original and 1 Photocopy)"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"></TextView>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_marginTop="10dp"
+                android:background="@color/colorPrimary"
+                android:weightSum="1"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+
+                    android:textColor="#ffffff"
+                    android:textStyle="bold"
+                    android:padding="20dp"
+                    android:text="⦁	Letter from respective embassy, requesting to SSP Traffic for issuance of driving license (original and 01 photocopy)"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"></TextView>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_marginTop="10dp"
+                android:background="@color/colorPrimary"
+                android:weightSum="1"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+
+                    android:textColor="#ffffff"
+                    android:textStyle="bold"
+                    android:padding="20dp"
+                    android:text="⦁	Passport and its 02 photocopies."
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"></TextView>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_marginTop="10dp"
+                android:background="@color/colorPrimary"
+                android:weightSum="1"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+
+                    android:textColor="#ffffff"
+                    android:textStyle="bold"
+                    android:padding="20dp"
+                    android:text="⦁	Copy of Diplomats card (02 No.)."
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"></TextView>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_marginTop="10dp"
+                android:background="@color/colorPrimary"
+                android:weightSum="1"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+
+                    android:textColor="#ffffff"
+                    android:textStyle="bold"
+                    android:padding="20dp"
+                    android:text="⦁	Copy of driving license from the country of origin (02 No.)"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"></TextView>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_marginTop="10dp"
+                android:background="@color/colorPrimary"
+                android:weightSum="1"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+
+                    android:textColor="#ffffff"
+                    android:textStyle="bold"
+                    android:padding="20dp"
+                    android:text="⦁	In case of non-availability of driving license the candidate shall have to pass road sign test And driving test."
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"></TextView>
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </ScrollView>
+    <ScrollView
+        android:visibility="invisible"
+        android:id="@+id/main5"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="20dp"
+        android:fillViewport="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_marginBottom="20dp"
+            android:layout_margin="30dp"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+
+                android:background="@color/colorPrimary"
+
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+
+                    android:textColor="#ffffff"
+                    android:textStyle="bold"
+                    android:padding="20dp"
+                    android:text="⦁	Letter from the organization in which he/she is employed requesting to SSP Traffic for issuance of driving license.  OR Letter from the Educational Institute (In case of student) in which he/she is studying, requesting to SSP Traffic for issuance of Driving License."
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"></TextView>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_marginTop="10dp"
+                android:background="@color/colorPrimary"
+                android:weightSum="1"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+
+                    android:textColor="#ffffff"
+                    android:textStyle="bold"
+                    android:padding="20dp"
+                    android:text="⦁	Copy of passport."
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"></TextView>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_marginTop="10dp"
+                android:background="@color/colorPrimary"
+                android:weightSum="1"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+
+                    android:textColor="#ffffff"
+                    android:textStyle="bold"
+                    android:padding="20dp"
+                    android:text="⦁	Driving License if any (Photocopy)."
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"></TextView>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_marginTop="10dp"
+                android:background="@color/colorPrimary"
+                android:weightSum="1"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+
+                    android:textColor="#ffffff"
+                    android:textStyle="bold"
+                    android:padding="20dp"
+                    android:text="⦁	Road sign test through computer (to practice road signs download our Android App RAABTA), driving test are mandatory."
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"></TextView>
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </ScrollView>
+    <ScrollView
+        android:visibility="invisible"
+        android:id="@+id/main6"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="20dp"
+        android:fillViewport="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_marginBottom="20dp"
+            android:layout_margin="30dp"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+
+                android:background="@color/colorPrimary"
+
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+
+                    android:textColor="#ffffff"
+                    android:textStyle="bold"
+                    android:padding="20dp"
+                    android:text="⦁	Passport And its Photocopy."
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"></TextView>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_marginTop="10dp"
+                android:background="@color/colorPrimary"
+                android:weightSum="1"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+
+                    android:textColor="#ffffff"
+                    android:textStyle="bold"
+                    android:padding="20dp"
+                    android:text="⦁	Road sign and driving tests are mandatory.
+"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"></TextView>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_marginTop="10dp"
+                android:background="@color/colorPrimary"
+                android:weightSum="1"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+
+                    android:textColor="#ffffff"
+                    android:textStyle="bold"
+                    android:padding="20dp"
+                    android:text="⦁	The afghan national who succeeded to get driving license on refugee NADRA Card, their license will be renewed on provision of passport with valid visa more than 6 months; otherwise their licenses will not be renewed."
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"></TextView>
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</RelativeLayout>

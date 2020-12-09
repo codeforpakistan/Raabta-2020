@@ -89,6 +89,8 @@ public class RegistrationFragment extends Fragment {
     private FirebaseAuth auth;
     PhoneAuthProvider.OnVerificationStateChangedCallbacks mCallback;
     private String verificationCode;
+    String checkFormat;
+
 
 
     public RegistrationFragment() {
@@ -176,6 +178,12 @@ public class RegistrationFragment extends Fragment {
         etEmail = (EditText) view.findViewById(R.id.et_email);
         etPassword = (EditText) view.findViewById(R.id.et_pass);
         etPhoneNumber = (EditText) view.findViewById(R.id.et_phone_number);
+        String formatedPhoneNumber=etPhoneNumber.getText().toString();
+        if (formatedPhoneNumber.length()<3) {
+            etPhoneNumber.startAnimation(shake);
+
+        }
+        checkFormat = formatedPhoneNumber.substring(0, 2);
 
         strName = etName.getText().toString().trim();
         strEmail = etEmail.getText().toString().trim();
@@ -185,9 +193,19 @@ public class RegistrationFragment extends Fragment {
 
         if (strName.equals("") || strName.length() < 3) {
             etName.startAnimation(shake);
-        } else if (strPhoneNumber.equals("") || strPhoneNumber.length() < 5) {
+        } else if (strPhoneNumber.equals("") || strPhoneNumber.length() < 5 || strPhoneNumber.length()>12) {
             etPhoneNumber.startAnimation(shake);
-        }else if (strPassword.equals("") ) {
+        }
+
+        else if (!checkFormat.matches("92")){
+            etPhoneNumber.setText("");
+            etPhoneNumber.startAnimation(shake);
+            etPhoneNumber.setHint("Format 923xxxxxxxxx");
+            etPhoneNumber.setHintTextColor(getResources().getColor(R.color.red_btn_bg_color));
+
+
+        }
+        else if (strPassword.equals("") ) {
             etPassword.startAnimation(shake);
         } else if (strCNIC.equals("") || strCNIC.length() < 13 || strCNIC.contains("-")) {
             etCNIC.startAnimation(shake);
@@ -196,10 +214,10 @@ public class RegistrationFragment extends Fragment {
         } else {
             Log.d("zma data", strName + "\n" + strEmail + "\n" + strPhoneNumber + "\n" + strCNIC);
             if (CheckNetwork.isInternetAvailable(getActivity())) {
-//                apiCall();
+                apiCall();
 
 
-                generateOtp();
+
             } else {
                 new SweetAlertDialog(getActivity(), SweetAlertDialog.ERROR_TYPE)
                         .setTitleText("Oops!")
@@ -226,17 +244,10 @@ public class RegistrationFragment extends Fragment {
                     public void onResponse(String response) {
                         boolean status = response.contains("true");
                         if (status) {
-                            pDialog.dismiss();
-                            new SweetAlertDialog(getActivity(), SweetAlertDialog.SUCCESS_TYPE)
-                                    .setTitleText("Success")
-                                    .setContentText("You have been registered")
-                                    .show();
-                            fragment = new LoginFragment();
-                            getFragmentManager().beginTransaction().replace(R.id.fragment_container, fragment).commit();
-                            etCNIC.setText("");
-                            etEmail.setText("");
-                            etPhoneNumber.setText("");
-                            etName.setText("");
+
+                            generateOtp();
+
+
 
 
                             Log.d("Zma response", response);
@@ -398,10 +409,22 @@ public class RegistrationFragment extends Fragment {
     private void SigninWithPhone(PhoneAuthCredential credential) {
         auth.signInWithCredential(credential)
                 .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+
+
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
+                        pDialog.dismiss();
                         if (task.isSuccessful()) {
-                            apiCall();
+                            new SweetAlertDialog(getActivity(), SweetAlertDialog.SUCCESS_TYPE)
+                                    .setTitleText("Success")
+                                    .setContentText("You have been registered")
+                                    .show();
+                            fragment = new LoginFragment();
+                            getFragmentManager().beginTransaction().replace(R.id.fragment_container, fragment).commit();
+                            etCNIC.setText("");
+                            etEmail.setText("");
+                            etPhoneNumber.setText("");
+                            etName.setText("");
                         } else {
                             Toast.makeText(getActivity(),"Incorrect OTP",Toast.LENGTH_SHORT).show();
                         }

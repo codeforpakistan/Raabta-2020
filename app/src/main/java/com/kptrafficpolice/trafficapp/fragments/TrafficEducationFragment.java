@@ -131,6 +131,7 @@ public class TrafficEducationFragment extends Fragment {
                 try {
                     Log.d("zma traf respo", String.valueOf(response));
                     JSONArray data = response.getJSONArray("data");
+                    ListTrafficEducation.clear();
                     for (int i = 0; i < data.length(); i++) {
                         pDialog.dismiss();
                         JSONObject jsonObject = data.getJSONObject(i);

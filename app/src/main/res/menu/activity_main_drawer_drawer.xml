@@ -11,14 +11,15 @@
             android:id="@+id/nav_website"
             android:icon="@drawable/footer_web_icon"
             android:title="KP Traffic Police Website" />
+
         <item
-            android:id="@+id/nav_license"
-            android:icon="@drawable/my_complaints_icon"
-            android:title="My License" />
+            android:id="@+id/nav_contact"
+            android:icon="@drawable/contact_drawer"
+            android:title="Contact Us" />
         <item
-            android:id="@+id/nav_mychalan"
-            android:icon="@drawable/my_complaints_icon"
-            android:title="My Chalan" />
+            android:id="@+id/nav_change_password"
+            android:icon="@drawable/passwordchange"
+            android:title="Change Password" />
         <item
             android:id="@+id/nav_logout"
             android:icon="@drawable/logout_icon"

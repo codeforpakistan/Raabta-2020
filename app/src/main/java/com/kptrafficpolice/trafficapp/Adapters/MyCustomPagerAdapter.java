@@ -8,6 +8,7 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.Toast;
 
+import androidx.cardview.widget.CardView;
 import androidx.viewpager.widget.PagerAdapter;
 
 import com.kptrafficpolice.trafficapp.R;
@@ -31,7 +32,7 @@ public class MyCustomPagerAdapter extends PagerAdapter {
 
     @Override
     public boolean isViewFromObject(View view, Object object) {
-        return view == ((LinearLayout) object);
+        return view == ((CardView) object);
     }
 
     @Override
@@ -47,7 +48,6 @@ public class MyCustomPagerAdapter extends PagerAdapter {
         imageView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(context, "you clicked image " + (position + 1), Toast.LENGTH_LONG).show();
             }
         });
 
@@ -56,6 +56,6 @@ public class MyCustomPagerAdapter extends PagerAdapter {
 
     @Override
     public void destroyItem(ViewGroup container, int position, Object object) {
-        container.removeView((LinearLayout) object);
+        container.removeView((CardView) object);
     }
 }

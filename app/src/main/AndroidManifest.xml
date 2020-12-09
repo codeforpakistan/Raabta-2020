@@ -26,10 +26,12 @@
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:largeHeap="true"
+        android:networkSecurityConfig="@xml/network_security_config"
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:replace="android:icon">
-        <activity android:name=".activities.QrCodeActivity"></activity>
+        <activity android:name=".activities.LicenseProcedureResult"></activity>
+        <activity android:name=".activities.QrCodeActivity" />
         <activity android:name=".activities.test">
 
             <!--
@@ -70,6 +72,9 @@
             android:theme="@style/FinestWebViewTheme.Light" />
         <activity
             android:name=".activities.AppIntroActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen" />
+        <activity
+            android:name=".activities.LicenseVerificationQr"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen" />
         <activity
             android:name=".fragments.ETest.ConductTest"

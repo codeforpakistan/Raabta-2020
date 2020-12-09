@@ -6,13 +6,30 @@
     android:layout_height="wrap_content">
 
 
+
     <TextView
 
+        android:layout_marginTop="5dp"
         android:id="@+id/offence_title"
         android:maxLines="3"
         android:background="#39AAA4"
         android:padding="20dp"
         android:gravity="left"
+        android:textStyle="bold"
+        android:textColor="#ffffff"
+        android:text="Excedding Precribe Speed limit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        ></TextView>
+    <TextView
+
+
+        android:layout_marginTop="2dp"
+        android:id="@+id/offence_title_URDU"
+        android:maxLines="3"
+        android:background="#39AAA4"
+        android:padding="20dp"
+        android:gravity="right"
         android:textStyle="bold"
         android:textColor="#ffffff"
         android:text="Excedding Precribe Speed limit"

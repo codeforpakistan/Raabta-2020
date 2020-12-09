@@ -4,10 +4,10 @@ package com.kptrafficpolice.trafficapp.utilities;
  * Created by Asus on 5/18/2017.
  */
 
-import android.app.Fragment;
 import android.content.Context;
 import android.os.Bundle;
 
+import androidx.fragment.app.Fragment;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -17,10 +17,13 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 
 import com.bumptech.glide.Glide;
 import com.kptrafficpolice.trafficapp.R;
 import com.kptrafficpolice.trafficapp.fragments.TrafficEducationDetailFragment;
+import com.kptrafficpolice.trafficapp.fragments.TrafficEducationFragment;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -70,10 +73,17 @@ public class TrafficEducationAdapter extends ArrayAdapter {
                 args.putString("englishDescription", item.strDescriptionEnglish);
                 args.putString("urduDescription", item.strDescriptionUrdu);
                 args.putString("image", item.strImage);
-                Fragment fragment = new TrafficEducationDetailFragment();
+                /*Fragment fragment = new TrafficEducationDetailFragment();
                 fragment.setArguments(args);
                 ((AppCompatActivity) context).getFragmentManager().beginTransaction().
-                        replace(R.id.fragment_container, fragment).addToBackStack("tag").commit();
+                        replace(R.id.fragment_container, fragment).addToBackStack("tag").commit();*/
+
+                FragmentManager manager = ((AppCompatActivity) context).getSupportFragmentManager();
+                Fragment fragment = new TrafficEducationDetailFragment();
+                fragment.setArguments(args);
+                FragmentTransaction transaction = manager.beginTransaction();
+                transaction.replace(R.id.fragment_container, fragment).addToBackStack("tag");
+                transaction.commit();
             }
         });
         return row;

@@ -140,6 +140,7 @@ public class MyLicenseFragment extends Fragment {
         btnShowRecord.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                pDialog.dismiss();
                 strLicenseNumber = etLicNumber.getText().toString();
                 if (strLicenseNumber.toString().equals("")
                         || strLicenseNumber.toString().length() < 13) {
@@ -205,7 +206,6 @@ public class MyLicenseFragment extends Fragment {
                     public void onResponse(String response) {
 
                         try {
-                            pDialog.dismiss();
                             JSONObject jsonResponseObject = new JSONObject(response);
                             String fullResponseObject = jsonResponseObject.get("LICENSE_DATA").toString();
 
@@ -230,6 +230,8 @@ public class MyLicenseFragment extends Fragment {
                                 args.putString("lic_type", strResponseLicType);
                                 args.putString("expiry_date", strResponseExpiryDate);
                                 args.putString("district", strResponseLicHolderDistrict);
+                                pDialog.dismiss();
+
                                 fragment = new LicenseFragment();
                                 getFragmentManager().beginTransaction().replace(R.id.fragment_container, fragment).addToBackStack("tag").commit();
                                 fragment.setArguments(args);

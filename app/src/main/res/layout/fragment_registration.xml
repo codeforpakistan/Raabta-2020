@@ -74,8 +74,7 @@
                     android:layout_height="wrap_content"
                     android:backgroundTint="#fff"
                     android:hint="923xx1234567"
-                    android:inputType="number"
-                    android:maxLength="13"
+                    android:inputType="phone"
                     android:textColor="#fff"
                     android:textColorHint="#fff" />
 

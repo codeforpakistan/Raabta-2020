@@ -16,6 +16,7 @@ import com.crashlytics.android.Crashlytics;
 import com.crashlytics.android.ndk.CrashlyticsNdk;
 import com.google.firebase.analytics.FirebaseAnalytics;
 import com.kptrafficpolice.trafficapp.R;
+import com.kptrafficpolice.trafficapp.utilities.PrefManager;
 
 import io.fabric.sdk.android.Fabric;
 //raabta
@@ -64,6 +65,7 @@ public class SplashScreenActivity extends AppCompatActivity {
     SharedPreferences.Editor editor;
     private FirebaseAnalytics mFirebaseAnalytics;
     private View mContentView;
+    PrefManager prefManager;
     private final Runnable mHidePart2Runnable = new Runnable() {
         @SuppressLint("InlinedApi")
         @Override
@@ -105,6 +107,8 @@ public class SplashScreenActivity extends AppCompatActivity {
 
         sharedPreferences = getSharedPreferences("com.kptraficpolice.trafficapp", 0);
         editor = sharedPreferences.edit();
+
+        prefManager = new PrefManager(this);
 
         mFirebaseAnalytics = FirebaseAnalytics.getInstance(this);
         Bundle bundle = new Bundle();

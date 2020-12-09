@@ -2,7 +2,7 @@ package com.kptrafficpolice.trafficapp.Model;
 
 public class OffenceModel {
     String offence_title,bike_offence_fee,car_offence_fee,jeep_offence_fee,truck_offence_fee,bus_offence_fee
-            ,trolley_offence_fee;
+            ,trolley_offence_fee,offence_title_URDU;
 
     public OffenceModel(String offence_title, String bike_offence_fee, String car_offence_fee, String jeep_offence_fee,
                         String truck_offence_fee, String bus_offence_fee, String trolley_offence_fee) {
@@ -13,6 +13,14 @@ public class OffenceModel {
         this.truck_offence_fee = truck_offence_fee;
         this.bus_offence_fee = bus_offence_fee;
         this.trolley_offence_fee = trolley_offence_fee;
+    }
+
+    public String getOffence_title_URDU() {
+        return offence_title_URDU;
+    }
+
+    public void setOffence_title_URDU(String offence_title_URDU) {
+        this.offence_title_URDU = offence_title_URDU;
     }
 
     public OffenceModel() {

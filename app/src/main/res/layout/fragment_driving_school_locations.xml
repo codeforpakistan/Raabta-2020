@@ -3,9 +3,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+
     android:background="@color/app_background"
     tools:context=".fragments.DrivingSchoolLocations">
     <ImageView
+
+        android:layout_above="@id/main_layout"
         android:id="@+id/main_logo"
         android:layout_marginBottom="20dp"
         android:layout_centerHorizontal="true"
@@ -16,12 +19,7 @@
 
     <!-- TODO: Update blank fragment layout -->
 
-    <ScrollView
 
-        android:fillViewport="true"
-        android:layout_below="@id/main_logo"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
    <LinearLayout
        android:id="@+id/main_layout"
        android:layout_marginRight="10dp"
@@ -45,6 +43,7 @@
 
 
        <LinearLayout
+           android:visibility="gone"
            android:background="@drawable/white_boarder"
 
            android:layout_marginBottom="10dp"
@@ -201,6 +200,7 @@
            android:layout_height="wrap_content"></TextView>
 
        <LinearLayout
+           android:visibility="gone"
            android:background="@drawable/white_boarder"
 
            android:layout_marginBottom="10dp"
@@ -339,6 +339,5 @@
            android:layout_width="250dp"
            android:layout_height="wrap_content"></Button>
    </LinearLayout>
-    </ScrollView>
 
 </RelativeLayout>

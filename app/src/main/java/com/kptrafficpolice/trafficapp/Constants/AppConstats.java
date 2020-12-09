@@ -1,8 +1,12 @@
 package com.kptrafficpolice.trafficapp.Constants;
 
-public class AppConstats {
+import com.kptrafficpolice.trafficapp.R;
+
+public class  AppConstats {
 
     public static String PARENT_TITLE_11="Disobey traffic signals.";
+    public static String PARENT_TITLE_11_URDU= String.valueOf(R.string.PARENT_TITLE_11_URDU);
+
     public static String CHILD_TITLE_11_1="Motorcycle @Rs. 200";
     public static String CHILD_TITLE_11_2="Motorcar @Rs. 400";
     public static String CHILD_TITLE_11_3="Jeep @Rs. 400";
@@ -10,7 +14,14 @@ public class AppConstats {
     public static String CHILD_TITLE_11_5="Truck @Rs. 500";
     public static String CHILD_TITLE_11_6="HTV/PSV @Rs. 500";
 
+    public static String CHILD_TITLE_11_7="HTV/PSV @Rs. 500";
+    public static String CHILD_TITLE_11_8="HTV/PSV @Rs. 500";
+    public static String CHILD_TITLE_11_9="HTV/PSV @Rs. 500";
+    public static String CHILD_TITLE_11_10="HTV/PSV @Rs. 500";
+
     public static String PARENT_TITLE_12="Improper crossing of railway track..";
+    public static String PARENT_TITLE_12_URDU= String.valueOf(R.string.PARENT_TITLE_12_URDU);
+
     public static String CHILD_TITLE_12_1="Motorcycle @Rs. 100";
     public static String CHILD_TITLE_12_2="Motorcar @Rs. 200";
     public static String CHILD_TITLE_12_3="Jeep @Rs. 200";
@@ -20,6 +31,8 @@ public class AppConstats {
 
 
     public static String PARENT_TITLE_13="Following too closely or cutting too sharply.";
+    public static String PARENT_TITLE_13_URUD= String.valueOf(R.string.PARENT_TITLE_13_URUD);
+
     public static String CHILD_TITLE_13_1="Motorcycle @Rs. 100";
     public static String CHILD_TITLE_13_2="Motorcar @Rs. 200";
     public static String CHILD_TITLE_13_3="Jeep @Rs. 200";
@@ -29,6 +42,8 @@ public class AppConstats {
 
 
     public static String PARENT_TITLE_14="Driving with tinted/covered glasses obstructing visibility from with in the vehicle.";
+    public static String PARENT_TITLE_14_URDU= String.valueOf(R.string.PARENT_TITLE_14_URDU);
+
     public static String CHILD_TITLE_14_1="Motorcycle @Rs. -";
     public static String CHILD_TITLE_14_2="Motorcar @Rs. 500";
     public static String CHILD_TITLE_14_3="Jeep @Rs. 500";
@@ -38,6 +53,8 @@ public class AppConstats {
 
 
     public static String PARENT_TITLE_15="Jumping Traffic queue";
+    public static String PARENT_TITLE_15_URDU= String.valueOf(R.string.PARENT_TITLE_15_URDU);
+
     public static String CHILD_TITLE_15_1="Motorcycle @Rs. 100";
     public static String CHILD_TITLE_15_2="Motorcar @Rs. 200";
     public static String CHILD_TITLE_15_3="Jeep @Rs. 200";
@@ -47,6 +64,8 @@ public class AppConstats {
 
 
     public static String PARENT_TITLE_16="Failing to dip head lights for other traffic.";
+    public static String PARENT_TITLE_16_URDU= String.valueOf(R.string.PARENT_TITLE_16_URDU);
+
     public static String CHILD_TITLE_16_1="Motorcycle @Rs. -";
     public static String CHILD_TITLE_16_2="Motorcar @Rs. 200";
     public static String CHILD_TITLE_16_3="Jeep @Rs. 200";
@@ -56,6 +75,8 @@ public class AppConstats {
 
 
     public static String PARENT_TITLE_17="Driving wrong way in one way street.";
+    public static String PARENT_TITLE_17_URDU= String.valueOf(R.string.PARENT_TITLE_17_URDU);
+
     public static String CHILD_TITLE_17_1="Motorcycle @Rs. 100";
     public static String CHILD_TITLE_17_2="Motorcar @Rs. 200";
     public static String CHILD_TITLE_17_3="Jeep @Rs. 200";
@@ -65,6 +86,8 @@ public class AppConstats {
 
 
     public static String PARENT_TITLE_18="Using turn indicator for any purpose other than those prescribed.";
+    public static String PARENT_TITLE_18_URDU= String.valueOf(R.string.PARENT_TITLE_18_URDU);
+
     public static String CHILD_TITLE_18_1="Motorcycle @Rs. 100";
     public static String CHILD_TITLE_18_2="Motorcar @Rs. 200";
     public static String CHILD_TITLE_18_3="Jeep @Rs. 200";
@@ -74,6 +97,8 @@ public class AppConstats {
 
 
     public static String PARENT_TITLE_19="Plying where prohibited.";
+    public static String PARENT_TITLE_19_URDU= String.valueOf(R.string.PARENT_TITLE_19_URDU);
+
     public static String CHILD_TITLE_19_1="Motorcycle @Rs. 100";
     public static String CHILD_TITLE_19_2="Motorcar @Rs. 200";
     public static String CHILD_TITLE_19_3="Jeep @Rs. 200";
@@ -83,6 +108,8 @@ public class AppConstats {
 
 
     public static String PARENT_TITLE_20="Improper loading of goods/improper loaded goods.";
+    public static String PARENT_TITLE_20_URDU= String.valueOf(R.string.PARENT_TITLE_20_URDU);
+
     public static String CHILD_TITLE_20_1="Motorcycle @Rs. -";
     public static String CHILD_TITLE_20_2="Motorcar @Rs. -";
     public static String CHILD_TITLE_20_3="Jeep @Rs. -";
@@ -92,6 +119,8 @@ public class AppConstats {
 
 
     public static String PARENT_TITLE_21="Failing to observe lighting hours.";
+    public static String PARENT_TITLE_21_URUD= String.valueOf(R.string.PARENT_TITLE_21_URUD);
+
     public static String CHILD_TITLE_21_1="Motorcycle @Rs. -";
     public static String CHILD_TITLE_21_2="Motorcar @Rs. 200";
     public static String CHILD_TITLE_21_3="Jeep @Rs. 200";
@@ -101,6 +130,8 @@ public class AppConstats {
 
 
     public static String PARENT_TITLE_22="Obstructing traffic.";
+    public static String PARENT_TITLE_22_URDU= String.valueOf(R.string.PARENT_TITLE_22_URDU);
+
     public static String CHILD_TITLE_22_1="Motorcycle @Rs. 200";
     public static String CHILD_TITLE_22_2="Motorcar @Rs. 300";
     public static String CHILD_TITLE_22_3="Jeep @Rs. 300";
@@ -110,6 +141,8 @@ public class AppConstats {
 
 
     public static String PARENT_TITLE_23="Failure to observe low sign.";
+    public static String PARENT_TITLE_23_URDU= String.valueOf(R.string.PARENT_TITLE_23_URDU);
+
     public static String CHILD_TITLE_23_1="Motorcycle @Rs. 100";
     public static String CHILD_TITLE_23_2="Motorcar @Rs. 100";
     public static String CHILD_TITLE_23_3="Jeep @Rs. 100";
@@ -119,6 +152,8 @@ public class AppConstats {
 
 
     public static String PARENT_TITLE_24="Riding motorcycle without safety helmet.";
+    public static String PARENT_TITLE_24_URDU= String.valueOf(R.string.PARENT_TITLE_24_URDU);
+
     public static String CHILD_TITLE_24_1="Motorcycle @Rs. 100";
     public static String CHILD_TITLE_24_2="Motorcar @Rs. -";
     public static String CHILD_TITLE_24_3="Jeep @Rs. -";
@@ -128,6 +163,8 @@ public class AppConstats {
 
 
     public static String PARENT_TITLE_25="Failure to stop for a school bus.";
+    public static String PARENT_TITLE_25_URDU= String.valueOf(R.string.PARENT_TITLE_25_URDU);
+
     public static String CHILD_TITLE_25_1="Motorcycle @Rs. -";
     public static String CHILD_TITLE_25_2="Motorcar @Rs. 200";
     public static String CHILD_TITLE_25_3="Jeep @Rs. 200";
@@ -137,6 +174,8 @@ public class AppConstats {
 
 
     public static String PARENT_TITLE_26="Turning where prohibited.";
+    public static String PARENT_TITLE_26_URDU= String.valueOf(R.string.PARENT_TITLE_26_URDU);
+
     public static String CHILD_TITLE_26_1="Motorcycle @Rs. 100";
     public static String CHILD_TITLE_26_2="Motorcar @Rs. 200";
     public static String CHILD_TITLE_26_3="Jeep @Rs. 200";
@@ -146,6 +185,8 @@ public class AppConstats {
 
 
     public static String PARENT_TITLE_27="Failure to protect learner drivers.";
+    public static String PARENT_TITLE_27_URDU= String.valueOf(R.string.PARENT_TITLE_27_URDU);
+
     public static String CHILD_TITLE_27_1="Motorcycle @Rs. 100";
     public static String CHILD_TITLE_27_2="Motorcar @Rs. 200";
     public static String CHILD_TITLE_27_3="Jeep @Rs. 200";
@@ -155,6 +196,8 @@ public class AppConstats {
 
 
     public static String PARENT_TITLE_28="Failure to yield right of way to pedestrians.";
+    public static String PARENT_TITLE_28_URDU= String.valueOf(R.string.PARENT_TITLE_28_URDU);
+
     public static String CHILD_TITLE_28_1="Motorcycle @Rs. 100";
     public static String CHILD_TITLE_28_2="Motorcar @Rs. 200";
     public static String CHILD_TITLE_28_3="Jeep @Rs. 200";
@@ -164,6 +207,8 @@ public class AppConstats {
 
 
     public static String PARENT_TITLE_29="Reckless & negligent driving.";
+    public static String PARENT_TITLE_29_URDU= String.valueOf(R.string.PARENT_TITLE_29_URDU);
+
     public static String CHILD_TITLE_29_1="Motorcycle @Rs. 200";
     public static String CHILD_TITLE_29_2="Motorcar @Rs. 400";
     public static String CHILD_TITLE_29_3="Jeep @Rs. 400";
@@ -173,6 +218,8 @@ public class AppConstats {
 
 
     public static String PARENT_TITLE_30="Driving without driving license.";
+    public static String PARENT_TITLE_30_URDU= String.valueOf(R.string.PARENT_TITLE_30_URDU);
+
     public static String CHILD_TITLE_30_1="Motorcycle @Rs. 600";
     public static String CHILD_TITLE_30_2="Motorcar @Rs. 600";
     public static String CHILD_TITLE_30_3="Jeep @Rs. 600";
@@ -182,6 +229,8 @@ public class AppConstats {
 
 
     public static String PARENT_TITLE_31="Driving an unregistered vehicle.";
+    public static String PARENT_TITLE_31_URDU= String.valueOf(R.string.PARENT_TITLE_31_URDU);
+
     public static String CHILD_TITLE_31_1="Motorcycle @Rs. 100";
     public static String CHILD_TITLE_31_2="Motorcar @Rs. 200";
     public static String CHILD_TITLE_31_3="Jeep @Rs. 200";
@@ -192,6 +241,8 @@ public class AppConstats {
 
 
     public static String PARENT_TITLE_32="Driving a motor vehicle without insurance coverage.";
+    public static String PARENT_TITLE_32_URDU= String.valueOf(R.string.PARENT_TITLE_32_URDU);
+
     public static String CHILD_TITLE_32_1="Motorcycle @Rs. -";
     public static String CHILD_TITLE_32_2="Motorcar @Rs. 100";
     public static String CHILD_TITLE_32_3="Jeep @Rs. 100";
@@ -201,6 +252,8 @@ public class AppConstats {
 
 
     public static String PARENT_TITLE_33="Driving a transport vehicle without, or with a defective speedometer.";
+    public static String PARENT_TITLE_33_URDU= String.valueOf(R.string.PARENT_TITLE_33_URDU);
+
     public static String CHILD_TITLE_33_1="Motorcycle @Rs. -";
     public static String CHILD_TITLE_33_2="Motorcar @Rs. 200";
     public static String CHILD_TITLE_33_3="Jeep @Rs. 200";
@@ -210,6 +263,8 @@ public class AppConstats {
 
 
     public static String PARENT_TITLE_34="Opening door dangerously.";
+    public static String PARENT_TITLE_34_URDU= String.valueOf(R.string.PARENT_TITLE_34_URDU);
+
     public static String CHILD_TITLE_34_1="Motorcycle @Rs. -";
     public static String CHILD_TITLE_34_2="Motorcar @Rs. 200";
     public static String CHILD_TITLE_34_3="Jeep @Rs. 200";
@@ -219,6 +274,8 @@ public class AppConstats {
 
 
     public static String PARENT_TITLE_35="Improper turning (turn from wrong lane).";
+    public static String PARENT_TITLE_35_URDU= String.valueOf(R.string.PARENT_TITLE_35_URDU);
+
     public static String CHILD_TITLE_35_1="Motorcycle @Rs. 100";
     public static String CHILD_TITLE_35_2="Motorcar @Rs. 200";
     public static String CHILD_TITLE_35_3="Jeep @Rs. 200";
@@ -228,6 +285,8 @@ public class AppConstats {
 
 
     public static String PARENT_TITLE_36="Improper lane usage.";
+    public static String PARENT_TITLE_36_URDU= String.valueOf(R.string.PARENT_TITLE_36_URDU);
+
     public static String CHILD_TITLE_36_1="Motorcycle @Rs. 100";
     public static String CHILD_TITLE_36_2="Motorcar @Rs. 200";
     public static String CHILD_TITLE_36_3="Jeep @Rs. 200";
@@ -237,6 +296,8 @@ public class AppConstats {
 
 
     public static String PARENT_TITLE_37="Blowing horn in silence zone.";
+    public static String PARENT_TITLE_37_URDU= String.valueOf(R.string.PARENT_TITLE_37_URDU);
+
     public static String CHILD_TITLE_37_1="Motorcycle @Rs. 100";
     public static String CHILD_TITLE_37_2="Motorcar @Rs. 200";
     public static String CHILD_TITLE_37_3="Jeep @Rs. 200";
@@ -246,6 +307,8 @@ public class AppConstats {
 
 
     public static String PARENT_TITLE_38="Improper u-turn.";
+    public static String PARENT_TITLE_38_URDU= String.valueOf(R.string.PARENT_TITLE_38_URDU);
+
     public static String CHILD_TITLE_38_1="Motorcycle @Rs. 100";
     public static String CHILD_TITLE_38_2="Motorcar @Rs. 200";
     public static String CHILD_TITLE_38_3="Jeep @Rs. 200";
@@ -255,6 +318,8 @@ public class AppConstats {
 
 
     public static String PARENT_TITLE_39="Refusal to produce license.";
+    public static String PARENT_TITLE_39_URDU= String.valueOf(R.string.PARENT_TITLE_39_URDU);
+
     public static String CHILD_TITLE_39_1="Motorcycle @Rs. 100";
     public static String CHILD_TITLE_39_2="Motorcar @Rs. 200";
     public static String CHILD_TITLE_39_3="Jeep @Rs. 200";
@@ -264,6 +329,8 @@ public class AppConstats {
 
 
     public static String PARENT_TITLE_40="Failing to stop when required by the traffic police.";
+    public static String PARENT_TITLE_40_URDU= String.valueOf(R.string.PARENT_TITLE_40_URDU);
+
     public static String CHILD_TITLE_40_1="Motorcycle @Rs.200";
     public static String CHILD_TITLE_40_2="Motorcar @Rs. 200";
     public static String CHILD_TITLE_40_3="Jeep @Rs. 200";
@@ -273,6 +340,8 @@ public class AppConstats {
 
 
     public static String PARENT_TITLE_41="Driving without fitness certificate.";
+    public static String PARENT_TITLE_41_URDU= String.valueOf(R.string.PARENT_TITLE_41_URDU);
+
     public static String CHILD_TITLE_41_1="Motorcycle @Rs. -";
     public static String CHILD_TITLE_41_2="Motorcar @Rs. -";
     public static String CHILD_TITLE_41_3="Jeep @Rs. -";
@@ -282,6 +351,8 @@ public class AppConstats {
 
 
     public static String PARENT_TITLE_42="Driving a vehicle exceeding prescribed weight limit.";
+    public static String PARENT_TITLE_42_URDU= String.valueOf(R.string.PARENT_TITLE_42_URDU);
+
     public static String CHILD_TITLE_42_1="Motorcycle @Rs. -";
     public static String CHILD_TITLE_42_2="Motorcar @Rs. -";
     public static String CHILD_TITLE_42_3="Jeep @Rs. -";
@@ -291,6 +362,8 @@ public class AppConstats {
 
 
     public static String PARENT_TITLE_43="Using vehicle in unsafe condition.";
+    public static String PARENT_TITLE_43_URDU= String.valueOf(R.string.PARENT_TITLE_43_URDU);
+
     public static String CHILD_TITLE_43_1="Motorcycle @Rs. 100";
     public static String CHILD_TITLE_43_2="Motorcar @Rs. 200";
     public static String CHILD_TITLE_43_3="Jeep @Rs. 200";
@@ -300,6 +373,8 @@ public class AppConstats {
 
 
     public static String PARENT_TITLE_44="Using pressing/musical horns.";
+    public static String PARENT_TITLE_44_URDU= String.valueOf(R.string.PARENT_TITLE_44_URDU);
+
     public static String CHILD_TITLE_44_1="Motorcycle @Rs. 100";
     public static String CHILD_TITLE_44_2="Motorcar @Rs. 200";
     public static String CHILD_TITLE_44_3="Jeep @Rs. 200";
@@ -309,6 +384,8 @@ public class AppConstats {
 
 
     public static String PARENT_TITLE_45="Driving vehicle in violation of law/rules not otherwise provided.";
+    public static String PARENT_TITLE_45_URDU= String.valueOf(R.string.PARENT_TITLE_45_URDU);
+
     public static String CHILD_TITLE_45_1="Motorcycle @Rs. 100";
     public static String CHILD_TITLE_45_2="Motorcar @Rs. 200";
     public static String CHILD_TITLE_45_3="Jeep @Rs. 200";
@@ -318,6 +395,8 @@ public class AppConstats {
 
 
     public static String PARENT_TITLE_46="Smoke emitting vehicle.";
+    public static String PARENT_TITLE_46_URDU= String.valueOf(R.string.PARENT_TITLE_46_URDU);
+
     public static String CHILD_TITLE_46_1="Motorcycle @Rs. 200";
     public static String CHILD_TITLE_46_2="Motorcar @Rs. 400";
     public static String CHILD_TITLE_46_3="Jeep @Rs. 400";
@@ -327,6 +406,8 @@ public class AppConstats {
 
 
     public static String PARENT_TITLE_47="Juvenile driving.";
+    public static String PARENT_TITLE_47_URDU= String.valueOf(R.string.PARENT_TITLE_47_URDU);
+
     public static String CHILD_TITLE_47_1="Motorcycle @Rs. 200";
     public static String CHILD_TITLE_47_2="Motorcar @Rs. 300";
     public static String CHILD_TITLE_47_3="Jeep @Rs. 300";
@@ -336,6 +417,8 @@ public class AppConstats {
 
 
     public static String PARENT_TITLE_48="Using mobile phone while driving.";
+    public static String PARENT_TITLE_48_URDU= String.valueOf(R.string.PARENT_TITLE_48_URDU);
+
     public static String CHILD_TITLE_48_1="Motorcycle @Rs. 500";
     public static String CHILD_TITLE_48_2="Motorcar @Rs. 500";
     public static String CHILD_TITLE_48_3="Jeep @Rs. 500";
@@ -345,6 +428,8 @@ public class AppConstats {
 
 
     public static String PARENT_TITLE_49="One wheeling by motorcyclist.";
+    public static String PARENT_TITLE_49_URDU= String.valueOf(R.string.PARENT_TITLE_49_URDU);
+
     public static String CHILD_TITLE_49_1="Motorcycle @Rs. 500";
     public static String CHILD_TITLE_49_2="Motorcar @Rs. -";
     public static String CHILD_TITLE_49_3="Jeep @Rs. -";
@@ -354,6 +439,8 @@ public class AppConstats {
 
 
     public static String PARENT_TITLE_50="Repeating the same violations.";
+    public static String PARENT_TITLE_50_URDU= String.valueOf(R.string.PARENT_TITLE_50_URDU);
+
     public static String CHILD_TITLE_50_1="Motorcycle @Rs. 600";
     public static String CHILD_TITLE_50_2="Motorcar @Rs. 600";
     public static String CHILD_TITLE_50_3="Jeep @Rs. 600";
@@ -363,6 +450,8 @@ public class AppConstats {
 
 
     public static String PARENT_TITLE_51="Abetment of the above violations.";
+    public static String PARENT_TITLE_51_URDU= String.valueOf(R.string.PARENT_TITLE_51_URDU);
+
     public static String CHILD_TITLE_51_1="Motorcycle @Rs. 100";
     public static String CHILD_TITLE_51_2="Motorcar @Rs. 200";
     public static String CHILD_TITLE_51_3="Jeep @Rs. 200";
@@ -372,6 +461,8 @@ public class AppConstats {
 
 
     public static String PARENT_TITLE_52="Driving motor vehicle without route permit if any.";
+    public static String PARENT_TITLE_52_URDU= String.valueOf(R.string.PARENT_TITLE_52_URDU);
+
     public static String CHILD_TITLE_52_1="Motorcycle @Rs. -";
     public static String CHILD_TITLE_52_2="Motorcar @Rs. -";
     public static String CHILD_TITLE_52_3="Jeep @Rs. -";
@@ -381,6 +472,8 @@ public class AppConstats {
 
 
     public static String PARENT_TITLE_53="Repeating the violation at serial No. 52 above.";
+    public static String PARENT_TITLE_53_URDU= String.valueOf(R.string.PARENT_TITLE_53_URDU);
+
     public static String CHILD_TITLE_53_1="Motorcycle @Rs. -";
     public static String CHILD_TITLE_53_2="Motorcar @Rs. -";
     public static String CHILD_TITLE_53_3="Jeep @Rs. -";
@@ -390,6 +483,8 @@ public class AppConstats {
 
 
     public static String PARENT_TITLE_54="Repeating the violation at serial No. 4 above.";
+    public static String PARENT_TITLE_54_URDU= String.valueOf(R.string.PARENT_TITLE_54_URDU);
+
     public static String CHILD_TITLE_54_1="Motorcycle @Rs. -";
     public static String CHILD_TITLE_54_2="Motorcar @Rs. -";
     public static String CHILD_TITLE_54_3="Jeep @Rs. -";

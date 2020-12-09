@@ -126,6 +126,8 @@ public class ForgotPassword extends AppCompatActivity {
                 new Response.Listener<String>() {
                     @Override
                     public void onResponse(String response) {
+                        Log.d("Zma response", response);
+
                         boolean status = response.contains("true");
                         if (status) {
                             pDialog.dismiss();

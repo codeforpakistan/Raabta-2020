@@ -1,6 +1,6 @@
 package com.kptrafficpolice.trafficapp.fragments;
 
-import android.app.Fragment;
+
 import android.net.Uri;
 import android.os.Bundle;
 
@@ -12,6 +12,7 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
 
 import com.bumptech.glide.Glide;
 import com.google.firebase.analytics.FirebaseAnalytics;

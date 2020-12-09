@@ -10,12 +10,14 @@ import android.os.SystemClock;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.kptrafficpolice.trafficapp.fragments.LoginFragment;
 import com.kptrafficpolice.trafficapp.R;
 import com.kptrafficpolice.trafficapp.utilities.BackgroundService;
+import com.kptrafficpolice.trafficapp.utilities.PrefManager;
 
 public class MainActivity extends AppCompatActivity {
     //raabta
@@ -26,12 +28,15 @@ public class MainActivity extends AppCompatActivity {
     String prefCNIC;
     public static boolean SLIDER_FLAG = false;
 
+    PrefManager prefManager;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
         sharedPreferences = getSharedPreferences("com.ghosttech.kptraffic", 0);
+        prefManager=new PrefManager(this);
+        prefManager.setFirstTimeLaunch(false);
         editor = sharedPreferences.edit();
         prefCNIC = sharedPreferences.getString("true", "");
         Log.d("zma shared pref drawer", prefCNIC);
@@ -49,6 +54,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-
-
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+    }
 }

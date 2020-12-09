@@ -89,6 +89,8 @@ public class LoginFragment extends Fragment {
     private String mParam1;
     private String mParam2;
     private OnFragmentInteractionListener mListener;
+    private String strUserID2;
+
     public LoginFragment() {
         // Required empty public constructor
     }
@@ -289,6 +291,7 @@ public class LoginFragment extends Fragment {
                 new Response.Listener<String>() {
                     @Override
                     public void onResponse(String response) {
+                        Log.d("zma user id responce", response);
                         if (response.contains("true")) {
                             pDialog.dismiss();
                             try {
@@ -297,6 +300,7 @@ public class LoginFragment extends Fragment {
                                 for (int i = 0; i < jsonArray.length(); i++) {
                                     JSONObject temp = jsonArray.getJSONObject(i);
                                     strUserID = temp.getString("user_id");
+                                    strUserID2 = temp.getString("signup_id");
                                     Username = temp.getString("name");
                                     Log.d("zma user id login", strUserID);
                                 }
@@ -304,8 +308,10 @@ public class LoginFragment extends Fragment {
                                 e.printStackTrace();
                             }
                             editor.putString("user_id", strUserID).commit();
+                            editor.putString("strUserID2", strUserID2).commit();
                             editor.putString("name", Username).commit();
                             editor.putString("true", strCNIC).commit();
+                            editor.putString("password", etPassword.getText().toString()).commit();
                             startActivity(new Intent(getActivity(), MainDrawerActivity.class));
                             getActivity().finish();
 

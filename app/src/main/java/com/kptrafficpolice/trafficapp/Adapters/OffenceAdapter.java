@@ -46,6 +46,7 @@ public class OffenceAdapter extends RecyclerView.Adapter<OffenceAdapter.MyViewHo
         holder.truck_offence_fee.setText(offenceModel.getTruck_offence_fee());
         holder.bus_offence_fee.setText(offenceModel.getBus_offence_fee());
         holder.trolley_offence_fee.setText(offenceModel.getTrolley_offence_fee());
+        holder.offence_title_URDU.setText(offenceModel.getOffence_title_URDU());
 
     }
 
@@ -56,7 +57,7 @@ public class OffenceAdapter extends RecyclerView.Adapter<OffenceAdapter.MyViewHo
 
     public class MyViewHolder extends RecyclerView.ViewHolder {
         public TextView car_offence_txt, offence_title, bike_offence_fee,jeep_offence_fee,truck_offence_fee,
-                bus_offence_fee,trolley_offence_fee;
+                bus_offence_fee,trolley_offence_fee,offence_title_URDU;
 
         public MyViewHolder(View view) {
             super(view);
@@ -67,6 +68,7 @@ public class OffenceAdapter extends RecyclerView.Adapter<OffenceAdapter.MyViewHo
             truck_offence_fee = (TextView) view.findViewById(R.id.truck_offence_fee);
             bus_offence_fee = (TextView) view.findViewById(R.id.bus_offence_fee);
             trolley_offence_fee = (TextView) view.findViewById(R.id.trolley_offence_fee);
+            offence_title_URDU = (TextView) view.findViewById(R.id.offence_title_URDU);
         }
     }
 }

@@ -1,11 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="10dp"
+    app:cardElevation="9dp"
+    android:outlineSpotShadowColor="@color/colorPrimary"
+    android:outlineAmbientShadowColor="@color/colorPrimary"
+    app:cardUseCompatPadding="true"
+
+    android:layout_height="wrap_content">
 
     <ImageView
+        android:scaleType="fitXY"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:src="@drawable/aa"
+        android:src="@drawable/a1"
         android:adjustViewBounds="true"
-        android:id="@+id/imageView" /></LinearLayout>
+        android:id="@+id/imageView" /></androidx.cardview.widget.CardView>

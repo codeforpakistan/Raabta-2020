@@ -31,6 +31,36 @@
                         android:orientation="vertical"
                         android:padding="20dp">
 
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="20dp"
+                            android:orientation="horizontal">
+
+                            <TextView
+
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:gravity="right"
+                                android:text="CNIC Number:"
+                                android:textColor="#45a7a4"
+                                android:textSize="15sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_marginLeft="10dp"
+                                android:id="@+id/tv_lh_cnic_number"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:gravity="left"
+                                android:text="12345678900987"
+                                android:textColor="#bebdbe"
+                                android:textSize="15sp" />
+                        </LinearLayout>
+
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
@@ -42,7 +72,7 @@
                                 android:layout_height="match_parent"
                                 android:layout_weight="1"
                                 android:gravity="left"
-                                android:text="Name"
+                                android:text="Name:"
                                 android:textColor="#669d90"
                                 android:textSize="15sp"
                                 android:textStyle="bold" />
@@ -75,17 +105,18 @@
                                 android:layout_height="match_parent"
                                 android:layout_weight="1"
                                 android:gravity="left"
-                                android:text="Father Name"
+                                android:text="Father Name/Husband Name:"
                                 android:textColor="#45a7a4"
                                 android:textSize="15sp"
                                 android:textStyle="bold" />
 
                             <TextView
+                                android:layout_gravity="center"
                                 android:id="@+id/tv_lh_fname"
                                 android:layout_width="0dp"
                                 android:layout_height="match_parent"
                                 android:layout_weight="1"
-                                android:gravity="left"
+                                android:gravity="left|center"
                                 android:text="Gul Bashsah"
                                 android:textColor="#bebdbe"
                                 android:textSize="15sp" />
@@ -97,37 +128,7 @@
 
                             android:background="#EEEEEE" />
 
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="20dp"
-                            android:orientation="horizontal">
 
-                            <TextView
-                                android:layout_width="0dp"
-                                android:layout_height="match_parent"
-                                android:layout_weight="1"
-                                android:gravity="left"
-                                android:text="CNIC Number"
-                                android:textColor="#45a7a4"
-                                android:textSize="15sp"
-                                android:textStyle="bold" />
-
-                            <TextView
-                                android:id="@+id/tv_lh_cnic_number"
-                                android:layout_width="0dp"
-                                android:layout_height="match_parent"
-                                android:layout_weight="1"
-                                android:gravity="left"
-                                android:text="12345678900987"
-                                android:textColor="#bebdbe"
-                                android:textSize="15sp" />
-                        </LinearLayout>
-
-                        <View
-                            android:layout_width="match_parent"
-                            android:layout_height="1.7dp"
-                            android:background="#EEEEEE" />
 
                         <LinearLayout
                             android:layout_width="match_parent"
@@ -140,7 +141,7 @@
                                 android:layout_height="match_parent"
                                 android:layout_weight="1"
                                 android:gravity="left"
-                                android:text="License Number"
+                                android:text="License Number:"
                                 android:textColor="#45a7a4"
                                 android:textSize="15sp"
                                 android:textStyle="bold" />
@@ -165,38 +166,6 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="20dp"
-                            android:orientation="horizontal">
-
-                            <TextView
-                                android:layout_width="0dp"
-                                android:layout_height="match_parent"
-                                android:layout_weight="1"
-                                android:gravity="left"
-                                android:text="District"
-                                android:textColor="#45a7a4"
-                                android:textSize="15sp"
-                                android:textStyle="bold" />
-
-                            <TextView
-                                android:id="@+id/tv_lh_district"
-                                android:layout_width="0dp"
-                                android:layout_height="match_parent"
-                                android:layout_weight="1"
-                                android:gravity="left"
-                                android:text="Nowshera"
-                                android:textColor="#bebdbe"
-                                android:textSize="18sp" />
-                        </LinearLayout>
-
-                        <View
-                            android:layout_width="match_parent"
-                            android:layout_height="1.7dp"
-                            android:background="#EEEEEE" />
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="20dp"
                             android:weightSum="1">
 
                             <TextView
@@ -204,7 +173,7 @@
                                 android:layout_height="match_parent"
                                 android:layout_weight="0.50"
                                 android:gravity="left"
-                                android:text="License Type"
+                                android:text="License Current Type:"
                                 android:textColor="#45a7a4"
                                 android:textSize="15sp"
                                 android:textStyle="bold" />
@@ -229,6 +198,38 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="20dp"
+                            android:weightSum="1">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="0.50"
+                                android:gravity="left"
+                                android:text="License Current/Renewal Date:"
+                                android:textColor="#45a7a4"
+                                android:textSize="15sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/tv_issue_date"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="0.50"
+                                android:gravity="left|center"
+                                android:text="Issue Date"
+                                android:textColor="#bebdbe"
+                                android:textSize="15sp" />
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1.7dp"
+                            android:background="#EEEEEE" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="20dp"
                             android:orientation="horizontal">
 
                             <TextView
@@ -236,7 +237,7 @@
                                 android:layout_height="match_parent"
                                 android:layout_weight="1"
                                 android:gravity="left"
-                                android:text="Expiry Date"
+                                android:text="License Expiry Date:"
                                 android:textColor="#45a7a4"
                                 android:textSize="15sp"
                                 android:textStyle="bold" />
@@ -256,6 +257,98 @@
                             android:layout_width="match_parent"
                             android:layout_height="1.7dp"
                             android:background="#EEEEEE" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="20dp"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:gravity="left"
+                                android:text="License Issue District:"
+                                android:textColor="#45a7a4"
+                                android:textSize="15sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/tv_lh_district"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:gravity="left"
+                                android:text="Nowshera"
+                                android:textColor="#bebdbe"
+                                android:textSize="18sp" />
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1.7dp"
+                            android:background="#EEEEEE" />
+
+
+                        <View
+                            android:visibility="gone"
+                            android:layout_width="match_parent"
+                            android:layout_height="1.7dp"
+                            android:background="#EEEEEE" />
+
+
+
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="20dp"
+                            android:weightSum="1">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="0.50"
+                                android:gravity="left"
+                                android:text="License Initial Issue Type/Issue Year:"
+                                android:textColor="#45a7a4"
+                                android:textSize="15sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/tv_initial_issue_date"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="0.50"
+                                android:gravity="left"
+                                android:text="Issue Date"
+                                android:textColor="#bebdbe"
+                                android:textSize="15sp" />
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1.7dp"
+                            android:background="#EEEEEE" />
+
+
+
+
+
+                        <Button
+                            android:id="@+id/search_again_btn"
+                            android:textColor="#ffffff"
+                            android:padding="20dp"
+                            android:text="Search Again"
+                            android:textStyle="bold"
+                            android:layout_gravity="center"
+                            android:background="@color/button_color"
+                            android:layout_marginTop="20dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"></Button>
+
                     </LinearLayout>
                 </TableLayout>
             </ScrollView>

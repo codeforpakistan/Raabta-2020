@@ -7,38 +7,11 @@
     tools:context=".activities.QrCodeActivity">
 
 
-    <ImageView
 
-        android:id="@+id/backbtn"
-        android:padding="5dp"
-        android:layout_marginTop="10dp"
-        android:src="@drawable/back"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"></ImageView>
 
-    <TextView
-        android:id="@+id/scan_txt"
-        android:textStyle="bold"
-        android:textSize="20dp"
-        android:gravity="center"
-        android:text="Scan QR Code"
-        android:padding="20dp"
-        android:layout_marginTop="20dp"
-        android:layout_below="@id/backbtn"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"></TextView>
 
-    <RelativeLayout
 
-        android:layout_above="@id/code_info"
-        android:layout_marginBottom="0dp"
-        android:id="@+id/maindesign"
-        android:background="@drawable/qrbg"
-        android:layout_margin="20dp"
-        android:layout_marginTop="20dp"
-        android:layout_below="@id/scan_txt"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+
         <SurfaceView
             android:visibility="gone"
             android:id="@+id/camera_view"
@@ -46,34 +19,5 @@
             android:layout_height="match_parent"
             />
 
-        <ImageView
-            android:id="@+id/qr_center_image"
-            android:src="@drawable/qrcode_green"
-            android:layout_centerInParent="true"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"></ImageView>
-    <TextView
-        android:textColor="#ffffff"
-        android:textStyle="bold"
-        android:gravity="center"
-        android:text="Scan Your Qr Code"
-        android:background="@drawable/qr_stylebtn"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentRight="true"
-        android:src="@drawable/qr_stylebtn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"></TextView>
 
-    </RelativeLayout>
-<Button
-
-    android:id="@+id/code_info"
-    android:textStyle="bold"
-    android:textColor="#ffffff"
-    android:text="Start Qr Code Scan"
-    android:layout_marginBottom="20dp"
-    android:layout_alignParentBottom="true"
-    android:background="@drawable/qr_startbtn"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"></Button>
 </RelativeLayout>

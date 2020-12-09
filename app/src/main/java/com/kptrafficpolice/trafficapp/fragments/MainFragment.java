@@ -10,7 +10,10 @@ import android.graphics.Color;
 import android.location.Address;
 import android.location.Geocoder;
 import android.location.Location;
+import android.media.AudioManager;
+import android.media.MediaPlayer;
 import android.net.Uri;
+import android.os.AsyncTask;
 import android.os.Build;
 import android.os.Bundle;
 
@@ -112,11 +115,13 @@ public class MainFragment extends Fragment {
             strResponseExpiryDate, strResponseLicHolderDistrict;
     String strChallanDate, strChallanDistrict, strChallanName, strChallanDutyPoint, strChallanAmount, strChallanStatus;
     TextView mTitleTextView;
+    ImageView linear_layout_ofnce_contact_us;
     SweetAlertDialog pDialog;
     Animation shake;
     LinearLayout btnComplaintSystem, btnLiveTrafficUpdates, btnChallanTracking, btnTrafficEducation,
             btnLicenseVerification, btnOffenceList, btnTest,linear_layout_driving_shool_location,
-            linear_layout_ofnce_contact_us,linear_layout_driving_license_procedure;
+            linear_layout_driving_license_procedure;
+
     SweetAlertDialog myDialog;
     // TODO: Rename and change types of parameters
     private String mParam1;
@@ -132,11 +137,20 @@ public class MainFragment extends Fragment {
     boolean hasCameraPermission = false;
 
     ViewPager viewPager;
-    int images[] = {R.drawable.a1, R.drawable.a2, R.drawable.a3, R.drawable.a4};
+    int images[] = {R.drawable.a2, R.drawable.a3, R.drawable.a4, R.drawable.a5,R.drawable.a6};
     MyCustomPagerAdapter myCustomPagerAdapter;
     private int page;
     private Handler handler=new Handler();
     private Runnable runnable;
+    private String strResponseLicHolderIssueDate;
+    private String strResponseLicHolderExpiry_date;
+    private MediaPlayer mediaPlayer;
+
+    private final static String stream = "http://203.124.35.147:8088/relay?type=http&nocache=9";
+    Button play;
+    boolean started = false;
+    boolean prepared = false;
+    private TextView radiotxt;
 
     public MainFragment() {
         // Required empty public constructor
@@ -322,10 +336,7 @@ public class MainFragment extends Fragment {
         Bundle mBundle = new Bundle();
         mBundle = getArguments();
         boolean checkMyLicense=mBundle.getBoolean("key");
-        if (checkMyLicense){
-            pDialog.show();
-            apiCallLicense("1430130677017");
-        }
+
 
 
         viewPager = (ViewPager)view.findViewById(R.id.view_pager);
@@ -335,8 +346,8 @@ public class MainFragment extends Fragment {
 
 
         viewPager.setClipToPadding(false);
-        viewPager.setPageMargin(24);
-        viewPager.setPadding(48, 8, 48, 8);
+        viewPager.setPageMargin(-24);
+        viewPager.setPadding(48, 0, 48, 0);
         viewPager.setOffscreenPageLimit(3);
         viewPager.setAdapter(myCustomPagerAdapter);
         viewPager.setCurrentItem(1);
@@ -349,7 +360,7 @@ public class MainFragment extends Fragment {
                     page++;
                 }
                 viewPager.setCurrentItem(page, true);
-                handler.postDelayed(this, 5000);
+                handler.postDelayed(this, 10000);
             }
         };
 
@@ -375,14 +386,19 @@ public class MainFragment extends Fragment {
         btnChallanTracking = (LinearLayout) view.findViewById(R.id.linear_layout_ct);
         btnOffenceList = (LinearLayout) view.findViewById(R.id.linear_layout_ofnce_lv);
         btnTest = (LinearLayout) view.findViewById(R.id.linear_layout_test);
-        linear_layout_ofnce_contact_us = (LinearLayout) view.findViewById(R.id.linear_layout_ofnce_contact_us);
+        linear_layout_ofnce_contact_us = view.findViewById(R.id.linear_layout_ofnce_contact_us);
         btnOffenceList.setEnabled(true);
         btnLicenseVerification = (LinearLayout) view.findViewById(R.id.linear_layout_lv);
         btnLiveTrafficUpdates = (LinearLayout) view.findViewById(R.id.linear_layout_lu);
         btnTrafficEducation = (LinearLayout) view.findViewById(R.id.linear_layout_te);
         linear_layout_driving_shool_location = (LinearLayout) view.findViewById(R.id.linear_layout_driving_shool_location);
         linear_layout_driving_license_procedure = (LinearLayout) view.findViewById(R.id.linear_layout_driving_license_procedure);
-/* removed complaint functionality */
+        radiotxt = view.findViewById(R.id.radiotxt);
+
+
+
+
+        /* removed complaint functionality */
 
         /*
 
@@ -505,12 +521,29 @@ public class MainFragment extends Fragment {
         linear_layout_ofnce_contact_us.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(Intent.ACTION_DIAL);
-                intent.setData(Uri.parse("tel:0123456789"));
-                startActivity(intent);
+
+                if (started) {
+                    mediaPlayer.stop();
+                    mediaPlayer.release();
+                    started = false;
+                    radiotxt.setText("Play");
+                } else {
+
+                    Toast.makeText(getActivity(), "PlayTask", Toast.LENGTH_SHORT).show();
+
+                    new PlayTask().execute(stream);
+
+                }
+
+
+/*
+                customDialogCall();
+*/
             }
         });
         /*contact us click*/
+
+
 
     }
 
@@ -554,6 +587,40 @@ public class MainFragment extends Fragment {
         dialog.getWindow().getDecorView().setBackgroundResource(android.R.color.transparent);
         inputValidationLicense();
     }
+    public void customDialogCall() {
+        dialog = new Dialog(getActivity());
+        dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
+        dialog.setContentView(R.layout.contact_us_dialog);
+        dialog.setCancelable(true);
+        Button call1=dialog.findViewById(R.id.caller_no1);
+        Button call2=dialog.findViewById(R.id.caller_no2);
+        Button call3=dialog.findViewById(R.id.caller_no3);
+        call1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Toast.makeText(getActivity(), "call 1", Toast.LENGTH_SHORT).show();
+            }
+        });
+        call2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Intent.ACTION_DIAL);
+                intent.setData(Uri.parse("tel:0123456789"));
+                startActivity(intent);
+            }
+        });
+        call3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+            }
+        });
+        dialog.show();
+        dialog.getWindow().getDecorView().setBackgroundResource(android.R.color.transparent);
+
+    }
+
 
     public void customDialogQrLicenseVerification() {
         dialog = new Dialog(getActivity());
@@ -614,6 +681,8 @@ public class MainFragment extends Fragment {
         ImageView ivInputIcon = (ImageView) dialog.findViewById(R.id.iv_input_dialog);
         ivInputIcon.setImageResource(R.drawable.search_challam_icon);
         etLicNumber = (EditText) dialog.findViewById(R.id.et_verify_license);
+       Button btn_search_license_record_qr = (Button) dialog.findViewById(R.id.btn_search_license_record_qr);
+       btn_search_license_record_qr.setVisibility(View.GONE);
         etLicNumber.setHint("Enter Challan Number");
         btnShowRecord = (Button) dialog.findViewById(R.id.btn_search_license_record);
         dialog.show();
@@ -678,6 +747,7 @@ public class MainFragment extends Fragment {
                     if (CheckNetwork.isInternetAvailable(getActivity())) {
                         apiCallLicense(strCNIC);
                         pDialog.show();
+                        dialog.dismiss();
                     } else {
                         pDialog.dismiss();
                         new SweetAlertDialog(getActivity(), SweetAlertDialog.WARNING_TYPE)
@@ -711,14 +781,18 @@ public class MainFragment extends Fragment {
         btnShowRecordQr.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                pDialog.dismiss();
+
+
+                dialog.dismiss();
                 startActivity(new Intent(getActivity(), QrCodeActivity.class));
+                getActivity().finish();
             }
         });
 
     }
 
     public void apiCallLicense(final String cnic) {
+        pDialog.dismiss();
         pDialog.setTitleText("Verifying Your License");
 
 
@@ -748,6 +822,8 @@ public class MainFragment extends Fragment {
                                 strResponseLicType = obj.getString("license_type");
                                 strResponseExpiryDate = obj.getString("expiry_date");
                                 strResponseLicHolderDistrict = obj.getString("district");
+                                strResponseLicHolderIssueDate = obj.getString("issue_date");
+                                strResponseLicHolderExpiry_date = obj.getString("initial_issue_date");
 
                                 args.putString("name", strResponseLicHolderName);
                                 args.putString("f_name", strResponseLicHolderFatherName);
@@ -756,10 +832,13 @@ public class MainFragment extends Fragment {
                                 args.putString("lic_type", strResponseLicType);
                                 args.putString("expiry_date", strResponseExpiryDate);
                                 args.putString("district", strResponseLicHolderDistrict);
+                                args.putString("issue_date", strResponseLicHolderIssueDate);
+                                args.putString("initial_issue_date", strResponseLicHolderExpiry_date);
                                 fragment = new LicenseFragment();
                                 getFragmentManager().beginTransaction().replace(R.id.fragment_container, fragment).addToBackStack("tag").commit();
                                 fragment.setArguments(args);
                             } else {
+
                                 new SweetAlertDialog(getActivity(), SweetAlertDialog.WARNING_TYPE)
                                         .setTitleText("CNIC not found.")
                                         .setContentText("")
@@ -947,6 +1026,44 @@ public class MainFragment extends Fragment {
         ft.setCustomAnimations(R.anim.fade_in, R.anim.fade_in);
         fragment.show(ft, "CreateEventDialogFragment");
         fragment.setCancelable(false);
+    }
+
+
+
+
+    private class PlayTask extends AsyncTask<String, Void, Boolean> {
+
+        @Override
+        protected void onPreExecute() {
+            super.onPreExecute();
+            radiotxt.setText("Loading..");
+
+        }
+
+        @Override
+        protected Boolean doInBackground(String... strings) {
+
+            try {
+                mediaPlayer = new MediaPlayer();
+                mediaPlayer.setAudioStreamType(AudioManager.STREAM_MUSIC);
+                mediaPlayer.setDataSource(strings[0]);
+                mediaPlayer.prepare();
+                prepared = true;
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+            return prepared;
+        }
+
+        @Override
+        protected void onPostExecute(Boolean aBoolean) {
+            super.onPostExecute(aBoolean);
+            linear_layout_ofnce_contact_us.setEnabled(true);
+            mediaPlayer.start();
+            started = true;
+            radiotxt.setText("Stop");
+
+        }
     }
 
 
