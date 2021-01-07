@@ -151,6 +151,7 @@ public class MainFragment extends Fragment {
     boolean started = false;
     boolean prepared = false;
     private TextView radiotxt;
+    LinearLayout radio_linear;
 
     public MainFragment() {
         // Required empty public constructor
@@ -291,7 +292,7 @@ public class MainFragment extends Fragment {
         bundle.putString(FirebaseAnalytics.Param.ITEM_ID, "1");
         bundle.putString(FirebaseAnalytics.Param.ITEM_NAME, "Main Module Screen");
         mFirebaseAnalytics.logEvent("Main_Screen", bundle);
-
+//new
         Fabric.with(getActivity(), new Crashlytics());
 
         tvUserName = (TextView) view.findViewById(R.id.tv_user_name);
@@ -394,6 +395,9 @@ public class MainFragment extends Fragment {
         linear_layout_driving_shool_location = (LinearLayout) view.findViewById(R.id.linear_layout_driving_shool_location);
         linear_layout_driving_license_procedure = (LinearLayout) view.findViewById(R.id.linear_layout_driving_license_procedure);
         radiotxt = view.findViewById(R.id.radiotxt);
+        radio_linear = view.findViewById(R.id.radio_linear);
+        radiotxt.setClickable(false);
+        radio_linear.setClickable(false);
 
 
 
@@ -522,7 +526,7 @@ public class MainFragment extends Fragment {
             @Override
             public void onClick(View view) {
 
-                if (started) {
+               /* if (started) {
                     mediaPlayer.stop();
                     mediaPlayer.release();
                     started = false;
@@ -533,7 +537,8 @@ public class MainFragment extends Fragment {
 
                     new PlayTask().execute(stream);
 
-                }
+                }*/
+                Toast.makeText(getActivity(), "coming soon", Toast.LENGTH_SHORT).show();
 
 
 /*
